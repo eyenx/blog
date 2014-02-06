@@ -1,0 +1,8 @@
+---
+layout: default
+title: home
+---
+{% include JB/setup %}
+{% assign page = site.posts.first %}
+{% assign content = page.content %}
+{% include  themes/flex/post.html %}
