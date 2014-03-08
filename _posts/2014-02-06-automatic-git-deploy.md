@@ -29,7 +29,7 @@ Instead I put it under `/usr/lib/ruby/gems`
 My next step was to clone my git repository into the http home folder.
 
 ~~~ bash
-# git clone https://github.com/eyenx/eyenx.ch /srv/http`
+# git clone https://github.com/eyenx/eyenx.ch /srv/http
 # chown http.http /srv/http -R
 ~~~
 \\
