@@ -17,6 +17,7 @@ author :
   github : http://github.com/eyenx
   twitter : http://twitter.com/eyenx
   gplus: http://plus.google.com/+AntonioTauro
+  lastfm: http://last.fm/user/gnomeye
   gravatar: 10842d203accc3007191a0dfed92ba65
 
 
@@ -67,7 +68,7 @@ JB :
   #   http://s3.amazonaws.com/yoursite/themes/watermelon
   #   /assets
   #
-  ASSET_PATH : false
+  ASSET_PATH : /assets
 
   # These paths are to the main pages Jekyll-Bootstrap ships with.
   # Some JB helpers refer to these paths; change them here if needed.
@@ -135,4 +136,4 @@ JB :
   #custom starts here 
 custom: 
   #added custom img path
-  img_path: /assets/img
+  #img_path: /assets/img

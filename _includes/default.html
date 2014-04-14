@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>{{ site.title }} - {{ site.tagline }}</title>
+      <meta name="viewport" content="width=device-width">
+      <!-- favicon.png -->
+      <link rel="shortcut icon" href="/favicon.png" type="image/png">
+      <!-- syntax highlighting CSS -->
+      <link rel="stylesheet" href="{{ ASSET_PATH }}/css/syntax.css">
+
+      <!-- Custom CSS -->
+      <link rel="stylesheet" href="{{ ASSET_PATH }}/css/main.css">
+
+      <!-- Custom CSS -->
+      <link rel="stylesheet" href="{{ ASSET_PATH }}/css/custom.css">
+
+      <!-- Responsive CSS -->
+      <link rel="stylesheet" href="{{ ASSET_PATH }}/css/responsive.css">
+
+      <!-- Custom CSS -->
+      <link rel="stylesheet" href="{{ ASSET_PATH }}/css/monosocialiconsfont.css">
+
+      <!-- Google Fonts -->
+      <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,700' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="site">
+      <div class="sidebar" id="sidebar">
+        <div class="header">
+            <h1 class="title"><a href="/"><img id="logo" src="http://www.gravatar.com/avatar/{{ site.author.gravatar }}?s=150"></a></h1>
+          <p><h1 class="subtitle">{{ site.title }}</h1></p>
+          <span class="tagline">{{ site.tagline }}</span>
+        </div>
+        <div class="posts">
+          <ul class="posts-list">
+            {% for post in site.posts %}
+              <li class="post-link">
+                <a class="post-title" href="{{ post.url }}">
+                  <span class="post-date">{{ post.date | date_to_string }}</span>
+                  {{ post.title }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="nav">
+            <a href="{{ BASE_PATH }}/about.html" class="footer-link">about</a> <span class="separator">&bull;</span>
+            <a href="{{ BASE_PATH }}/archive.html" class="footer-link">archive</a> <span class="separator">&bull;</span>
+            <a href="{{ BASE_PATH }}/pages.html" class="footer-link">pages</a> 
+        </div>
+        <div class="footer">
+          <span id="footer-links">
+            <a href="mailto:{{ site.author.email }}" class="symbol" title="&#xe024;"></a>
+            <a href="{{ site.author.twitter }}" class="symbol" title="&#xe086;"></a>
+            <a href="{{ site.author.github }}" class="symbol" title="&#xe037;"></a>
+            <a href="{{ site.author.gplus }}" class="symbol" title="&#xe039;"></a>
+            <a href="{{ site.author.lastfm }}" class="symbol" title="&#xe051;"></a>
+            <a href="{{ BASE_PATH }}/rss.xml" class="symbol" title="&#xe071;"></a>
+        </span>
+     </div>
+      </div>
+
+        {{ content }}
+
+    </div>
+    <script src="{{ ASSET_PATH }}/js/responsive.js" type="text/javascript"></script>
+  </body>
+</html>

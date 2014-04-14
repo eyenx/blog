@@ -86,5 +86,8 @@ Don't forget to include the **MathJax.js**. I just took it from their website.
 Actually the official **MathJax** from [mathjax.org](http://mathjax.org) works way better.
 
 ~~~html
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script>
+<script type="text/javascript" 
+src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 ~~~
+
