@@ -30,5 +30,5 @@ Enjoying food, wine, travelling and minimal techno music whenever I can.
 Currently living near Berne, Switzerland.
 {: r}
 
-<p><a style="border: none;" href='{{site.author.twitter}}' class='symbol' title='circletwitterbird'>Follow me</a></p>
+<p><a style="border: none;" href='{{site.author.twitter}}'><i class='fi-social-twitter size-48'></i>  Follow me</a></p>
 {: r}
