@@ -21,4 +21,4 @@ The interesting thing though, are these nice mono icons:
 
 It won't take you long to find out it's actually only an icon font. In fact after looking for some nice icons for a very long time (about 5 min) on [deviantart](http://www.deviantart.com), I happened to come across this open source project started by [Ivan Drinchev](http://www.drinchev.com).
 
-You can find all relevant information on [this homepage](http://http://drinchev.github.io/monosocialiconsfont/). It is fairly easy to set up. Have fun!
+You can find all relevant information on [this homepage](http://drinchev.github.io/monosocialiconsfont/). It is fairly easy to set up. Have fun!
