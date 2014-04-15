@@ -5,7 +5,6 @@
          url('/assets/fonts/MonoSocialIconsFont-1.10.woff') format('woff'),
          url('/assets/fonts/MonoSocialIconsFont-1.10.ttf') format('truetype'),
          url('/assets/fonts/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
-    src: url('/assets/fonts/MonoSocialIconsFont-1.10.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
