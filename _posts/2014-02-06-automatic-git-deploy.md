@@ -11,7 +11,7 @@ tags: [git,jekyll,nginx]
 
 **Believe me**, it was. 
 
-###First things first
+## first things first
 
 I put my whole [jekyll](http://jekyllbootstrap.com) project on my [github](https://github.com/eyenx/eyenx.ch) page.
 
@@ -51,7 +51,7 @@ finally, make it be cloned and built automatically every hour, without checking 
 \\
 Test it simply by removing the `_site/categories.html` file and wait for **cron** to do his magic.
 
-### Still keeping my todo list
+## still keeping my todo list
 
 Thanks to this simple modification, my **todo** list just got a lot shorter:
 

@@ -7,7 +7,7 @@ tags: []
 ---
 {% include JB/setup %}
 
-## Finally an update!
+## finally an update!
 
 I managed to find some time to actually set up [disqus](http://disqus.com) on this blog.
 
@@ -23,6 +23,6 @@ It won't take you long to find out it's actually only an icon font. In fact afte
 
 You can find all relevant information on [this homepage](http://drinchev.github.io/monosocialiconsfont/). It is fairly easy to set up. Have fun!
 
-## EDIT
+## edit
 
 I [changed](https://github.com/eyenx/eyenx.ch/commit/3ebf62c21e4bc55d4ebc8fc110bf4c247a5377f5) from the mono social icon font to Foundation Icons. You can find all relevant Info [here](http://zurb.com/playground/foundation-icon-fonts-3).

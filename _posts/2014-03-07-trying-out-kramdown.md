@@ -8,7 +8,7 @@ tags: [math,jekyll,ruby]
 {% include JB/setup %}
 {% include mathjaxjs.html %}
 
-## Kramdown seems awesome!
+## kramdown seems awesome!
 
 I heard and used **kramdown** already a long time ago. But I didn't know they had such a good documentation on their [website](http://kramdown.gettalong.org/syntax.html).
 
@@ -18,7 +18,7 @@ It is only after seeing this image that I went crazy.
 
 So I'll try some **math** stuff here. I hope you don't mind. (I don't really know math)
 
-###Today I learned###
+## today I learned
 
 everyone should know
 
@@ -44,7 +44,7 @@ a^2 + 2ab + b^2
 \end{align*}
 $$
 
-###How does the syntax look like?###
+## how does the syntax look like?
 
 Quite simple. One has only to put the latex code between the two dollar signs. 
 
@@ -72,7 +72,7 @@ renders to
 
 $$ 2^{3}+8=16 $$
 
-###JS needed to render###
+##JS needed to render
 
 Don't forget to include the **MathJax.js**. I just took it from their website.
 
@@ -81,7 +81,7 @@ Don't forget to include the **MathJax.js**. I just took it from their website.
 ~~~
 <br>
 
-###EDIT###
+##edit
 
 Actually the official **MathJax** from [mathjax.org](http://mathjax.org) works way better.
 
