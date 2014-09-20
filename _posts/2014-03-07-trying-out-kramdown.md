@@ -46,15 +46,15 @@ $$
 
 ## how does the syntax look like?
 
-Quite simple. One has only to put the latex code between the two dollar signs. 
+Quite simple. One has only to put the latex code between the two dollar signs.
 
-~~~latex
+{% highlight latex %}
 $$
 \begin{align*}
 (a+b)^n &= \sum_{k=0}^n \binom{n}{k}\cdot a^{n-k}\cdot b^{k}
 \end{align*}
 $$
-~~~
+{% endhighlight %}
 \\
 will render to
 
@@ -66,8 +66,10 @@ $$
 
 Inline math is very similar.
 
-`$$ 2^{3}+8=16 $$` 
-
+{% highlight latex %}
+$$ 2^{3}+8=16 $$
+{% endhighlight %}
+\\
 renders to
 
 $$ 2^{3}+8=16 $$
@@ -76,18 +78,17 @@ $$ 2^{3}+8=16 $$
 
 Don't forget to include the **MathJax.js**. I just took it from their website.
 
-~~~html
+{% highlight html %}
 <script src="http://kramdown.gettalong.org/MathJax/MathJax.js" type="text/javascript"></script>
-~~~
+{% endhighlight %}
 <br>
 
 ##edit
 
 Actually the official **MathJax** from [mathjax.org](http://mathjax.org) works way better.
 
-~~~html
-<script type="text/javascript" 
+{% highlight html %}
+<script type="text/javascript"
 src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
-~~~
-
+{% endhighlight %}

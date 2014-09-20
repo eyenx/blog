@@ -2,14 +2,14 @@
 layout: post
 title: "automatic git deploy"
 description: ""
-category: webserver 
+category: webserver
 tags: [git,jekyll,nginx]
 ---
 {% include JB/setup %}
 
 ## this blog update was deployed automatically
 
-**Believe me**, it was. 
+**Believe me**, it was.
 
 ## first things first
 
@@ -21,33 +21,33 @@ Normally ruby would install all gems into the `$HOME/.gem` directory. Since I wa
 
 Instead I put it under `/usr/lib/ruby/gems`
 
-~~~ bash
-# pacman -S ruby
-# gem install --install-dir /usr/lib/ruby/gems/2.1.0 --no-user-install jekyll
-~~~
+{% highlight bash %}
+$ pacman -S ruby
+$ gem install --install-dir /usr/lib/ruby/gems/2.1.0 --no-user-install jekyll
+{% endhighlight %}
 \\
 My next step was to clone my git repository into the http home folder.
 
-~~~ bash
-# git clone https://github.com/eyenx/eyenx.ch /srv/http
-# chown http.http /srv/http -R
-~~~
+{% highlight bash %}
+$ git clone https://github.com/eyenx/eyenx.ch /srv/http
+$ chown http.http /srv/http -R
+{% endhighlight %}
 \\
 and modify my `nginx.conf`:
 
-~~~
+{% highlight bash %}
         location / {
             root   /srv/http/_site;
             index  index.html index.htm index.php;
         }
-~~~
+{% endhighlight %}
 \\
 finally, make it be cloned and built automatically every hour, without checking if there was a commit or not. Simple but **reliable**.
 
-~~~ bash
-# cat /etc/cron.d/jekyll
-0 * * * * http git pull; jekyll build 
-~~~
+{% highlight bash %}
+$ cat /etc/cron.d/jekyll
+0 * * * * http git pull; jekyll build
+{% endhighlight %}
 \\
 Test it simply by removing the `_site/categories.html` file and wait for **cron** to do his magic.
 
@@ -56,6 +56,6 @@ Test it simply by removing the `_site/categories.html` file and wait for **cron*
 Thanks to this simple modification, my **todo** list just got a lot shorter:
 
 - I want to create an **about** page
-- <s> share the code on **github** </s> 
+- <s> share the code on **github** </s>
 - <s>**automatically deploy** this static site on my [DigitalOcean](http://digitalocean.com) vhost</s>
 - **post comments** over [Disqus](http://disqus.com)
