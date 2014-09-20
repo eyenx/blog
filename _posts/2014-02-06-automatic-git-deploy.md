@@ -22,7 +22,7 @@ Normally ruby would install all gems into the `$HOME/.gem` directory. Since I wa
 Instead I put it under `/usr/lib/ruby/gems`
 
 ~~~ bash
-# pacman install ruby
+# pacman -S ruby
 # gem install --install-dir /usr/lib/ruby/gems/2.1.0 --no-user-install jekyll
 ~~~
 \\
