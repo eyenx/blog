@@ -36,7 +36,7 @@
         </div>
         <div class="posts">
           <ul class="posts-list">
-            {% for post in site.posts %}
+            {% for post in site.posts limit:3 %}
               <li class="post-link">
                 <a class="post-title" href="{{ post.url }}">
                   <span class="post-date">{{ post.date | date_to_string }}</span>
@@ -47,9 +47,9 @@
           </ul>
         </div>
         <div class="nav">
+            <a href="{{ BASE_PATH }}/posts.html" class="footer-link">all posts</a> <span class="separator">&bull;</span>
             <a href="{{ BASE_PATH }}/about.html" class="footer-link">about</a> <span class="separator">&bull;</span>
-            <a href="{{ BASE_PATH }}/archive.html" class="footer-link">archive</a> <span class="separator">&bull;</span>
-            <a href="{{ BASE_PATH }}/pages.html" class="footer-link">pages</a> 
+            <a href="{{ BASE_PATH }}/pages.html" class="footer-link">pages</a>
         </div>
         <div class="footer">
           <span id="footer-links">
