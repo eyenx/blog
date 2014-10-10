@@ -36,7 +36,10 @@
         </div>
         <div class="posts">
           <ul class="posts-list">
-            {% for post in site.posts limit:3 %}
+            <li class="post-link">
+                <span class="post-item" >last 3 posts</span>
+            </li>
+            {% for post in site.posts limit: 3 %}
               <li class="post-link">
                 <a class="post-title" href="{{ post.url }}">
                   <span class="post-date">{{ post.date | date_to_string }}</span>
@@ -44,13 +47,15 @@
                 </a>
               </li>
             {% endfor %}
+            <li class="post-link">
+                <a href="/posts"><span class="post-item">show all posts</span></a>
+            </li>
           </ul>
         </div>
-        <div class="nav">
-            <a href="{{ BASE_PATH }}/posts" class="footer-link">all posts</a> <span class="separator">&bull;</span>
-            <a href="{{ BASE_PATH }}/about" class="footer-link">about</a> <span class="separator">&bull;</span>
-            <a href="{{ BASE_PATH }}/pages" class="footer-link">pages</a>
-        </div>
+            <div class="nav">
+                <a href="{{ BASE_PATH }}/about" class="footer-link">about</a> <span class="separator">&bull;</span>
+                <a href="{{ BASE_PATH }}/pages" class="footer-link">pages</a>
+            </div>
         <div class="footer">
           <span id="footer-links">
             <a href="mailto:{{ site.author.email }}" class="step fi-mail size-24"></a>

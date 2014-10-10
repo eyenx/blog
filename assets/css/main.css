@@ -150,7 +150,7 @@ a:hover {
 #title {
   color: #494949;
   margin-bottom: 0.35em;
-  font-size: 3.5em;
+  font-size: 3em;
   text-transform: uppercase;
 }
 
@@ -250,6 +250,14 @@ a:hover {
 
 .post-link {
   margin-bottom: 0.75em;
+}
+
+.post-item,
+.post-item a {
+  color:rgb(128,133,193);
+  font-weight:normal;
+  font-size:1.1em;
+  text-transform: uppercase;
 }
 
 .post-title {
