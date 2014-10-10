@@ -12,7 +12,7 @@ group: navigation
 **Antonio Tauro**
 {: r}
 
-Also known as eye,eyenx,tntr,gnomeye or simply toni
+Also known as eye,eyenx,gnomeye or simply toni
 {: r}
 
 Geek, coding, linux and opensource enthusiast
@@ -32,3 +32,4 @@ Currently living near Berne, Switzerland.
 
 <p><a style="border: none;" href='{{site.author.twitter}}'><i class='fi-social-twitter size-48'></i>  Follow me</a></p>
 {: r}
+
