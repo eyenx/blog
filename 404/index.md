@@ -8,3 +8,4 @@ group: navigation
 
 page not found
 
+{% include image.html url="404.gif" width="100%" style="display:block;margin-left:auto;margin-right:auto;" description="me" %}
