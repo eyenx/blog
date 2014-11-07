@@ -1,0 +1,7 @@
+.about {
+    text-align:center;
+}
+
+section.post > div.MathJax_Display {
+    width:auto!important;
+}

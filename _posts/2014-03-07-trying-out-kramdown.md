@@ -4,8 +4,9 @@ title: "trying out kramdown"
 description: ""
 category: math
 tags: [math,jekyll,ruby]
+disqus: y
+share: n
 ---
-{% include JB/setup %}
 {% include mathjaxjs.html %}
 
 ## kramdown seems awesome!

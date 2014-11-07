@@ -4,8 +4,9 @@ title: "automatic git deploy"
 description: ""
 category: webserver
 tags: [git,jekyll,nginx]
+disqus: y
+share: n
 ---
-{% include JB/setup %}
 
 ## this blog update was deployed automatically
 

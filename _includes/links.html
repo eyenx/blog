@@ -1,0 +1,5 @@
+<div class="block">
+  {% for link in site.links %}
+  <a target="{% if link.external %}_blank{% else %}_top{% endif %}" class="step {{ link.icon }} size-24" href="{{ link.url }}"></a>
+  {% endfor %}
+</div>

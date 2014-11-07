@@ -4,8 +4,9 @@ title: "disqus and more"
 description: ""
 category: "announcement"
 tags: []
+disqus: y
+share: n
 ---
-{% include JB/setup %}
 
 ## finally an update!
 
@@ -17,7 +18,7 @@ There is now also an about page over [here](http://eyenx.ch/about.html). Please 
 
 The interesting thing though, are these nice mono icons:
 
-{% include image.html url="symbols.png"  style="display:block;margin-left:auto;margin-right:auto;" description="symbols" %}
+<img src="/img/symbols.png" alt="symbols" style="display:block;margin-left:auto;margin-right:auto;"/>
 
 It won't take you long to find out it's actually only an icon font. In fact after looking for some nice icons for a very long time (about 5 min) on [deviantart](http://www.deviantart.com), I happened to come across this open source project started by [Ivan Drinchev](http://www.drinchev.com).
 
