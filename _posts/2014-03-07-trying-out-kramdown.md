@@ -15,7 +15,7 @@ I heard and used **kramdown** already a long time ago. But I didn't know they ha
 
 It is only after seeing this image that I went crazy.
 
-<img src="http://kramdown.gettalong.org/overview.png" width="70%" >
+![kramdownoverview](/img/p/20140307_1.png){: .w70 .center}
 
 So I'll try some **math** stuff here. I hope you don't mind. (I don't really know math)
 
@@ -80,7 +80,9 @@ $$ 2^{3}+8=16 $$
 Don't forget to include the **MathJax.js**. I just took it from their website.
 
 {% highlight html %}
-<script src="http://kramdown.gettalong.org/MathJax/MathJax.js" type="text/javascript"></script>
+<script 
+src="http://kramdown.gettalong.org/MathJax/MathJax.js" type="text/javascript">
+</script>
 {% endhighlight %}
 <br>
 
