@@ -110,4 +110,4 @@ CMD /start
 EXPOSE 80
 {% endhighlight %}
 
-The `nginx.conf` is created from a [Jinja2](http://jinja2.org) template file using [j2cli](https://pypi.python.org/pypi/j2cli/). For more information visit my [github project](https://github.com/eyenx/docker-nginx-rp) or the public [docker repository](https://registry.hub.docker.com/u/eyenx/nginx-rp/)
+The `nginx.conf` is created from a [Jinja2](http://jinja.pocoo.org/) template file using [j2cli](https://pypi.python.org/pypi/j2cli/). For more information visit my [github project](https://github.com/eyenx/docker-nginx-rp) or the public [docker repository](https://registry.hub.docker.com/u/eyenx/nginx-rp/)
