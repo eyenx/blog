@@ -39,7 +39,7 @@ My standalone HTTP Server isn't required anymore. I switched using [Docker](http
 ### node clusters
 
 
-I've only got one cluster with two really cheap **(5$)** [Digitalocean](http://digitalocean.com) nodes deployed on it. It may seem not that much, but the cool thing is, that at the moment it's more than enough.
+I've only got one cluster with two really cheap **(5$)** [Digitalocean](http://www.digitalocean.com) nodes deployed on it. It may seem not that much, but the cool thing is, that at the moment it's more than enough.
 
 ### service clusters
 
