@@ -1,6 +1,6 @@
 function prettyDate ( timeObj ) {
   function setToStartOfDay( timeObject ) {
-    return new Date(timeObject.getUTCFullYear(), timeObject.getUTCMonth(), timeObject.getUTCDate(), 0, 0, 0, 0);
+    return new Date(timeObject.getFullYear(), timeObject.getMonth(), timeObject.getDate(), 0, 0, 0, 0);
   }
   function pluralize(count, singular, plural) {
     return count + " " + ( (count == 1) ? singular : (plural || singular + "s") );
