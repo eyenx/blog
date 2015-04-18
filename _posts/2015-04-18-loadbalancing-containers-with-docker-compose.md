@@ -518,6 +518,10 @@ There is way more to know about it though. It comes with many options and argume
 
 But in hope I will find more time in future, I'm looking forward to try them out.
 
+## source of code example
+
+You can find the whole example project on [github][11].
+
 [1]: http://docs.docker.com/compose/
 [2]: http://fig.sh
 [3]: https://registry.hub.docker.com/u/tutum/haproxy/
@@ -528,3 +532,4 @@ But in hope I will find more time in future, I'm looking forward to try them out
 [8]: https://pypi.python.org/pypi/j2cli/0.3.1-0
 [9]: http://jinja.pocoo.org/
 [10]: http://docs.docker.com/compose/cli/
+[11]: https://github.com/eyenx/docker-compose-example
