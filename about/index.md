@@ -21,4 +21,4 @@ I'm currently living near **Berne, Switzerland**.
 Don't hesitate to follow me on <a style="border: none;" href='https://twitter.com/{{ site.twitter_username }}'>Twitter<i class='fi-social-twitter size-48'></i></a>
 {: r}
 
-{% include coinbase.html %}
+{% include changetip.html %}
