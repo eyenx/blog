@@ -6,7 +6,7 @@ group: navigation
 ---
 <img src="/img/about.png" width="25%" style="display:block;margin-left:auto;margin-right:auto;border-radius:50%" />
 {:r: .about}
-My name is **Antonio Tauro**, but everyone calls me Toni. 
+My name is **Antonio Tauro**, but everyone calls me **Toni**. 
 {: r}
 
 On the interwebs I may hide behind the nicknames **eyenx**,**eye** or my old alias **gnomeye**.
