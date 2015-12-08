@@ -11,12 +11,12 @@ test:
   override:
     - docker run -d -p 4000:4000 tutum.co/eyenx/eyenx-ch-jekyll; sleep 20
     - netcat -vz localhost 4000
-    - curl -I http://localhost:4000/about
+    - curl -I http://localhost:4000/about/
 
 deployment:
   hub:
     branch: master
     commands:
-      - docker login -e $TUTUM_MAIL -u $TUTUM_USER -p $TUTUM_PASS
+      - docker login -e $TUTUM_MAIL -u $TUTUM_USER -p $TUTUM_PASS tutum.co
       - docker push tutum.co/eyenx/eyenx-ch-jekyll
       - tutum stack eyenx-ch redeploy
