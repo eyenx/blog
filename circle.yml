@@ -5,6 +5,7 @@ machine:
 dependencies:
   override:
     - docker info
+    - sudo pip install tutum
     - docker build -t tutum.co/eyenx/eyenx-ch-jekyll .
 
 test:
@@ -19,4 +20,4 @@ deployment:
     commands:
       - docker login -e $TUTUM_MAIL -u $TUTUM_USER -p $TUTUM_PASS tutum.co
       - docker push tutum.co/eyenx/eyenx-ch-jekyll
-      - tutum stack eyenx-ch redeploy
+      - docker run tutum stack eyenx-ch redeploy
