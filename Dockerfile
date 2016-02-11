@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y node python-pygments
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/
 
-RUN gem install github-pages jekyll jekyll-redirect-from kramdown
+RUN gem install github-pages jekyll jekyll-redirect-from kramdown pygments.rb
 
 WORKDIR /src
 
