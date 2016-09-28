@@ -18,6 +18,5 @@ deployment:
   hub:
     branch: master
     commands:
-      - docker login -e $TUTUM_MAIL -u $TUTUM_USER -p $TUTUM_PASS tutum.co
-      - docker push tutum.co/eyenx/eyenx-ch-jekyll
-      - tutum service redeploy eyenx-ch-jekyll
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker push eyenx/eyenx-ch-jekyll
