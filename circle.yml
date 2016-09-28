@@ -9,7 +9,7 @@ dependencies:
 
 test:
   override:
-    - docker run -d -p 4000:4000 tutum.co/eyenx/eyenx-ch-jekyll; sleep 20
+    - docker run -d -p 4000:4000 eyenx/eyenx-ch-jekyll; sleep 20
     - netcat -vz localhost 4000
     - curl -I http://localhost:4000/about/
 
