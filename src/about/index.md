@@ -18,7 +18,10 @@ In my spare time I find myself enjoying food, wine, **going for a run** or trave
 I'm currently living near **Berne, Switzerland**.
 {: r}
 
-Don't hesitate to follow me on <a style="border: none;" href='https://twitter.com/{{ site.twitter_username }}'>Twitter<i class='fi-social-twitter size-48'></i></a>
+Don't hesitate to follow me on <a style="border: none;" href='https://twitter.com/{{ site.twitter_username }}'>Twitter</a>.
+{: r}
+
+My PGP Public key can be found on <a style="border: none;" href='https://keybase.io/eyenx/key.asc'>Keybase</a>.
 {: r}
 
 {% include changetip.html %}
