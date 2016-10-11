@@ -21,7 +21,7 @@ I'm currently living near **Berne, Switzerland**.
 Don't hesitate to follow me on <a style="border: none;" href='https://twitter.com/{{ site.twitter_username }}'>Twitter</a>.
 {: r}
 
-My PGP Public key can be found on <a style="border: none;" href='https://keybase.io/eyenx/key.asc'>Keybase</a>.
+<i class='fi-key medium'></i> PGP <a style="border: none;" href='https://keybase.io/eyenx/key.asc'>0796 132F 0077 A5F8</a>.
 {: r}
 
 {% include changetip.html %}
