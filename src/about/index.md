@@ -23,4 +23,4 @@ Don't hesitate to follow me on <a style="border: none;" href='https://twitter.co
 <i class='fi-key medium'></i> PGP <a style="border: none;" href='https://keybase.io/eyenx/key.asc'>0796 132F 0077 A5F8</a>.
 {: r}
 
-{% include changetip.html %}
+{% include donate_button.html %}
