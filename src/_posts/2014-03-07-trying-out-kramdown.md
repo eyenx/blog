@@ -75,7 +75,7 @@ renders to
 
 $$ 2^{3}+8=16 $$
 
-##JS needed to render
+## JS needed to render
 
 Don't forget to include the **MathJax.js**. I just took it from their website.
 
@@ -86,7 +86,7 @@ src="http://kramdown.gettalong.org/MathJax/MathJax.js" type="text/javascript">
 {% endhighlight %}
 <br>
 
-##edit
+## edit
 
 Actually the official **MathJax** from [mathjax.org](http://mathjax.org) works way better.
 
