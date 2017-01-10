@@ -23,4 +23,5 @@ Don't hesitate to follow me on <a style="border: none;" href='https://twitter.co
 <i class='fi-key medium'></i> PGP <a style="border: none;" href='https://keybase.io/eyenx/key.asc'>0796 132F 0077 A5F8</a>.
 {: r}
 
-{% include donate_button.html %}
+BTC <a style="border: none;" href='bitcoin:1P4jvStf6ekJPWhX5Hd1iRmH13ST2oWaxC'>1P4jvStf6ekJPWhX5Hd1iRmH13ST2oWaxC</a>
+{: r}
