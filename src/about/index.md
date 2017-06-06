@@ -14,7 +14,7 @@ I work as a System Engineer and consider myself a geek, coder, **GNU/Linux** and
 In my spare time I love to **run**, enjoy food and wine or travel mainly in Europe.
 {: r}
 
-Currently, I'm living near **Berne, Switzerland**.
+Currently, I'm living near **Basel, Switzerland**.
 {: r}
 
 Don't hesitate to follow me on <a style="border: none;" href='https://twitter.com/{{ site.twitter_username }}'>Twitter</a>.
