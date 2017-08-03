@@ -23,7 +23,7 @@ Don't hesitate to follow me on <a style="border: none;" href='https://twitter.co
 <i class='fi-key medium'></i> <a style="border: none;" href='https://pgp.mit.edu/pks/lookup?op=get&search=0x0796132F0077A5F8'>0x0796132F0077A5F8</a>
 {: r}
 
-<i class='fi-bitcoin medium'></i> <a style="border: none;" href='bitcoin:1DS5XnSpCeZneFJskqrKmHJAPQVCu12jyU'>1DS5XnSpCeZneFJskqrKmHJAPQVCu12jyU</a>
+<i class='fi-bitcoin medium'></i> <a style="border: none;" href='bitcoin:16cSjkpDsN4Nd64aEq677NVf87C9Wrd9fY'>16cSjkpDsN4Nd64aEq677NVf87C9Wrd9fY</a>
 {: r}
 
 <a href='https://ko-fi.com/A533MH6' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
