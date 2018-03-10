@@ -8,7 +8,7 @@ jobs:
       - setup_remote_docker
       - run:
           name: build Image
-          comamand: |
+          command: |
             docker build -t eyenx/eyenx-ch-jekyll .
       - run:
           name: Run Tests
