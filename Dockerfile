@@ -1,12 +1,8 @@
-FROM ruby:2.3
+FROM ruby:2.3-alpine
 
 MAINTAINER eye@eyenx.ch
 
-RUN apt-get update && apt-get install -y node python-pygments
-
-RUN apt-get clean && rm -rf /var/lib/apt/lists/
-
-RUN gem install github-pages jekyll jekyll-redirect-from kramdown pygments.rb
+RUN apk update && apk upgrade && apk add build-base python py-pip && pip install --upgrade pip && pip install pygments && gem install github-pages jekyll jekyll-redirect-from kramdown pygments.rb && apk del build-base  && rm -rf /root/.cache
 
 WORKDIR /src
 
