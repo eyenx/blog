@@ -1,0 +1,20 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: docker
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: build Image
+          comamand: |
+            docker build -t eyenx/eyenx-ch-jekyll .
+      - run:
+          name: Run Tests
+          command: |
+            docker run -d -p 4000:4000 eyenx/eyenx-ch-jekyll && sleep 20 && curl -I http://localhost:4000/about
+      - run:
+          name: Push Image
+          command: |
+            docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS && docker push eyenx/eyenx-ch-jekyll:latest
