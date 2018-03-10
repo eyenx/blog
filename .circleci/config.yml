@@ -13,7 +13,7 @@ jobs:
       - run:
           name: Run Tests
           command: |
-            docker run -d -p 4000:4000 eyenx/eyenx-ch-jekyll && sleep 20 && curl -I http://localhost:4000/about
+            apk add --update curl && docker run -d -p 4000:4000 eyenx/eyenx-ch-jekyll && sleep 20 && curl -I http://localhost:4000/about
       - run:
           name: Push Image
           command: |
