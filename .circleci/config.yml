@@ -18,7 +18,3 @@ jobs:
           name: Push Image
           command: |
             echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin && docker push eyenx/eyenx-ch-jekyll:latest
-      - run:
-          name: Deploy to static content to surge
-          command: |
-              docker run -e SURGE_TOKEN -e SURGE_LOGIN -e SURGE_HOSTNAME eyenx/eyenx-ch-jekyll:latest /surge_deploy.sh
