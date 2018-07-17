@@ -19,14 +19,6 @@ links:
     url:          https://github.com/eyenx
     icon:         fi-social-github
     external:     true
-  - name:         googleplus
-    url:          https://google.com/+AntonioTauro
-    icon:         fi-social-google-plus
-    external:     true
-  - name:         lastfm
-    url:          https://last.fm/user/gnomeye
-    icon:         fi-social-lastfm
-    external:     true
   - name:         rss
     url:          /rss.xml
     icon:         fi-rss
