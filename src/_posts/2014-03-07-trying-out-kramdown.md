@@ -15,7 +15,7 @@ I heard and used **kramdown** already a long time ago. But I didn't know they ha
 
 It is only after seeing this image that I went crazy.
 
-![kramdownoverview](/img/p/20140307_1.png){: .w70 .center}
+![kramdownoverview](https://ipfs.io/ipns/static.eyenx.ch/p/20140307_1.png){: .w70 .center}
 
 So I'll try some **math** stuff here. I hope you don't mind. (I don't really know math)
 

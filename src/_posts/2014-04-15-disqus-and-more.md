@@ -18,7 +18,7 @@ There is now also an about page over [here](http://eyenx.ch/about.html). Please 
 
 The interesting thing though, are these nice mono icons:
 
-![symbols](/img/p/20140415_1.png){: .center}
+![symbols](https://ipfs.io/ipns/static.eyenx.ch/p/20140415_1.png){: .center}
 
 It won't take you long to find out it's actually only an icon font. In fact after looking for some nice icons for a very long time (about 5 min) on [deviantart](http://www.deviantart.com), I happened to come across this open source project started by [Ivan Drinchev](http://www.drinchev.com).
 
