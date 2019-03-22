@@ -7,4 +7,4 @@ group: navigation
 
 page not found
 
-<img src="https://ipfs.io/ipns/static.eyenx.ch/img/404.gif" width="100%" style="display:block;margin-left:auto;margin-right:auto;" />
+<img src="https://ipfs.io/ipns/static.eyenx.ch/404.gif" width="100%" style="display:block;margin-left:auto;margin-right:auto;" />
