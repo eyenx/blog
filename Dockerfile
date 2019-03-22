@@ -1,17 +1,18 @@
-FROM ruby:2.3-alpine
+FROM ruby:alpine as builder
 
-MAINTAINER eye@eyenx.ch
+LABEL maintainer="eye@eyenx.ch"
 
-COPY test.sh /test.sh
-COPY surge_deploy.sh /surge_deploy.sh
-
-RUN chmod +x /surge_deploy.sh && chmod +x /test.sh && apk update && apk upgrade && apk add build-base python py-pip && pip install --upgrade pip && pip install pygments && gem install github-pages jekyll jekyll-redirect-from kramdown pygments.rb && apk del build-base  && rm -rf /root/.cache
+RUN apk update && apk upgrade && apk add build-base python py-pip && pip install --upgrade pip && pip install pygments && gem install github-pages jekyll jekyll-redirect-from kramdown pygments.rb && apk del build-base  && rm -rf /root/.cache 
 
 WORKDIR /src
 
 COPY src /src
 
-EXPOSE 4000
+RUN jekyll b
 
-CMD jekyll serve -H 0.0.0.0
 
+FROM nginx:alpine 
+
+LABEL maintainer="eye@eyenx.ch"
+
+COPY --from=builder /src/_site /usr/share/nginx/html
