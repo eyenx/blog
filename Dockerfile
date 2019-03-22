@@ -15,6 +15,6 @@ FROM nginx:alpine
 
 LABEL maintainer="eye@eyenx.ch"
 
-RUN sed -i 's#.*error_page.*404.*404.*#    error_page  404   /404/;#g' conf.d/default.conf 
+RUN sed -i 's#.*error_page.*404.*404.*#    error_page  404   /404/;#g' /etc/nginx/conf.d/default.conf 
 
 COPY --from=builder /src/_site /usr/share/nginx/html
