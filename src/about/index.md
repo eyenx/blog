@@ -4,7 +4,7 @@ title: about
 header: about
 group: navigation
 ---
-<img src="/img/about.jpg" width="25%" style="display:block;margin-left:auto;margin-right:auto;border-radius:50%" />
+<img src="https://ipfs.io/ipfs/Qme5JKv2cTw9tdcP8u8DAbgF3yyRB3MFBx4CHacqjYvDCk" width="25%" style="display:block;margin-left:auto;margin-right:auto;border-radius:50%" />
 {:r: .about}
 My name is **Antonio Tauro**, but everyone calls me **Toni**. 
 {: r}

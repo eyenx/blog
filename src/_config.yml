@@ -23,5 +23,5 @@ links:
     url:          /rss.xml
     icon:         fi-rss
 highlighter:      pygments
-permalink:        /:year/:month/:day/:title
+permalink:        /:year/:month/:day/:title/
 markdown:         kramdown
