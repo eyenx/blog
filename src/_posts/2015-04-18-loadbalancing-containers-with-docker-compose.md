@@ -18,7 +18,7 @@ I just didn't find the time to look at **docker-compose** for real. I really was
 
 Kinda liked the name fig. But that's perhaps because I love to eat some dried figs, especially before a run.
 
-![dried_fig](https://ipfs.io/ipns/static.eyenx.ch/p/20150418_1.png){: .center .w40 }
+![dried_fig](/img/p/20150418_1.png){: .center .w40 }
 
 **docker-compose** helps you orchestrate your containers. Which means you can define your application environment with one simple **YAML** file.
 
@@ -34,7 +34,7 @@ You can find a lot of beginner tutorials on how to use docker-compose. This is w
 
 My idea was to startup this environment with **docker-compose**
 
-![example_environment](https://ipfs.io/ipns/static.eyenx.ch/p/20150418_2.png){: .center }
+![example_environment](/img/p/20150418_2.png){: .center }
 
 We are going to use the [tutum/haproxy][3] image for the loadbalancer and the [redis][4] image for the database.
 
@@ -54,7 +54,7 @@ For further information visit [the docker docs][7].
 
 ###  LET'S-AH-GO
 
-![mario64](https://ipfs.io/ipns/static.eyenx.ch/p/20150418_3.gif){: .center .w60 }
+![mario64](/img/p/20150418_3.gif){: .center .w60 }
 
 
 First we will need to create a project directory. Let's just call it **example**
@@ -250,9 +250,9 @@ With this configuration **docker-compose** would only start one single web app c
 
 Taken from the [command line reference][10]:
 
-![docker-compose-scale](https://ipfs.io/ipns/static.eyenx.ch/p/20150418_4.png){: .center .w90 }
+![docker-compose-scale](/img/p/20150418_4.png){: .center .w90 }
 
-![mind-blown](https://ipfs.io/ipns/static.eyenx.ch/p/20150418_5.gif){: .center .w60 }
+![mind-blown](/img/p/20150418_5.gif){: .center .w60 }
 
 {% highlight bash %}
 ~$ export MIND=BLOWN
@@ -508,7 +508,7 @@ Hostname: e36eb77a4d33
 
 **YAY IT WORKS**
 
-![house_dance](https://ipfs.io/ipns/static.eyenx.ch/p/20150418_6.gif){: .center .w70 }
+![house_dance](/img/p/20150418_6.gif){: .center .w70 }
 
 ## summary
 
