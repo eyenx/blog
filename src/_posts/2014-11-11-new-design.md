@@ -31,7 +31,7 @@ That's about it. I'm easy to impress, I know. A few of my friends like it, other
 
 My standalone HTTP Server isn't required anymore. I switched using [Docker](http://docker.io) with [tutum](http://tutum.co) now, even on my production homepage. 
 
-![betatag](https://ipfs.io/ipns/static.eyenx.ch/p/20141111_1.png){: .w60 .center }
+![betatag](/img/p/20141111_1.png){: .w60 .center }
 
 **Oops**. Let's look at a few more details.
 
@@ -45,13 +45,13 @@ I've only got one cluster with two really cheap **(5$)** [Digitalocean](http://w
 
 On the other side, I've got way to many docker instances.
 
-![services](https://ipfs.io/ipns/static.eyenx.ch/p/20141111_2.png){: .center }
+![services](/img/p/20141111_2.png){: .center }
 
 Yes, you saw right. **9 docker instances** deployed on two **1CPU/500MB** nodes. It gets kinda interesting to see how the services are connected with each other.
 
 It took me way more time than I intended to draw this. So please, at least look at it for a few seconds.
 
-![network](https://ipfs.io/ipns/static.eyenx.ch/p/20141111_3.png){: .center}
+![network](/img/p/20141111_3.png){: .center}
 
 Every connection between the services is accomplished with the docker linking technology. **eyenx-ch-rp**, the nginx reversproxy, is linked with the two loadbalancers **eyen-ch-lb** and **eyenx-ch-dev-lb** and these services are linked with their respective jekyll backends. For the loadbalancers I'm using the [haproxy docker image](http://https://registry.hub.docker.com/u/tutum/haproxy/) provided by tutum as described in my [previous post](http://eyenx.ch/2014/10/03/tutum-ftw/).
 
@@ -61,12 +61,12 @@ Personally I think that 4 containers in the production **eyenx-ch-jekyll** servi
 
 When creating the jekyll services, I wanted them to have the *sequential deployment* option active. Sadly, upon finishing the service creation process, I saw the missing **ON** flag in the **eyenx-ch-jekyll** service details.
 
-![servicedetail](https://ipfs.io/ipns/static.eyenx.ch/p/20141111_4.png)
+![servicedetail](/img/p/20141111_4.png)
 
 
 A few minutes later I tried again and took some screenshots for the purpose to contact the [tutum support](http://support.tutum.co) team. This was their response:
 
-![mail](https://ipfs.io/ipns/static.eyenx.ch/p/20141111_5.png){: .center }
+![mail](/img/p/20141111_5.png){: .center }
 
 I gratefullly denied their kind offer. It just was nice to know they were already working on the fix.
 

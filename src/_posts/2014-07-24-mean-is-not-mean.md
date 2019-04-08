@@ -38,7 +38,7 @@ Thanks to this you can develop and let your **API** grow without having to touch
 
 I took the liberty to link this image I found on scotch.io for better understanding:
 
-![mean](https://ipfs.io/ipns/static.eyenx.ch/p/20140724_1.jpg){: .center}
+![mean](/img/p/20140724_1.jpg){: .center}
 
 You could also try to get a better idea from [mean.io](http://mean.io) or [meanjs.org](http://meanjs.org).
 
