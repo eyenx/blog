@@ -11,7 +11,7 @@ My name is **Antonio Tauro**, but everyone calls me **Toni**.
 
 On the interwebs I may hide behind the nicknames **eyenx** or the shorter form **eye**.
 I work as a **Linux Systems Engineer** and consider myself a geek, coder, **GNU/Linux** and **opensource** enthusiast.
-In my spare time I love to **run**, favorably on **trails**. I also like to run a few **ultra-trail-marathons** a year. For more information on my sport, please visit my <a href='toni.run'>running page</a>.
+In my spare time I love to **run**, favorably on **trails**. I also like to run a few **ultra-trail-marathons** a year. For more information on my sport, please visit my <a href='https://toni.run'>running page</a>.
 I enjoy **vegetarian food** and love to taste some good wine or beer (**IPAs** being my favorites).
 I spend my holidays mainly in Europe.
 {: r}
