@@ -7,14 +7,18 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
-          name: Build Image
+          name: build image
           command: |
-            docker build -t eyenx/eyenx-ch .
+            docker build -t eyenx/eyenx-ch:${CIRCLE_BRANCH} .
       - run:
-          name: Run Tests
+          name: run test
           command: |
-            docker run -d -p 8080:80 eyenx/eyenx-ch && sleep 20 && docker exec $(docker ps -q) apk add curl && docker exec $(docker ps -q) curl localhost
+            docker run -d -p 8080:80 eyenx/eyenx-ch:${CIRCLE_BRANCH} && sleep 20 && docker exec $(docker ps -q) apk add curl && docker exec $(docker ps -q) curl localhost
       - run:
-          name: Push Image
+          name: push image to branch tag
           command: |
-            echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin && docker push eyenx/eyenx-ch:latest
+            echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin && docker push eyenx/eyenx-ch:${CIRCLE_BRANCH}
+      - run:
+          name: push image to latest if branch is master
+          command: |
+            if [ "$CIRCLE_BERANCH" = "master" ] ; then docker tag eyenx/eyenx-ch:${CIRCLE_BRANCH} eyenx/eyenx-ch:latest &&  echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin && docker push eyenx/eyenx-ch:latest ; fi
