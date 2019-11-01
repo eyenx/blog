@@ -1,4 +1,4 @@
-<div class="block">
+<div class="block" style="display:block;margin-left:auto;margin-right:auto;text-align:center;">
   {% for link in site.links %}
   <a target="{% if link.external %}_blank{% else %}_top{% endif %}" class="step {{ link.icon }} size-24" href="{{ link.url }}"></a>
   {% endfor %}

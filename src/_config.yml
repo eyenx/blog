@@ -1,18 +1,49 @@
-title:            eyenx
-description:      yet another geek
-url:              http://eyenx.ch # Site url.
-disqus_shortname: eyenx 
-twitter_username: eyenx
+# Site settings
+title:          eyenx
+description:    "yet another geek"
+url:            "https://eyenx.ch"
 
+
+# Author
+author:
+  name:         eyenx
+  url:          https://eyenx.ch
+  email:        eye@eyenx.ch
+
+# Build settings
+markdown:       kramdown
+include:
+  - _pages
+
+# Assets
+sass:
+  sass_dir:     _sass
+  style:        compressed
+
+# Gems
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+
+# Permalinks
+permalink:      /:year/:month/:day/:title/
+paginate:       5
+#highlighter: pygments
+
+# Excludes
+exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
+
+# Disqus
+disqus: eyenx
+
+# links
 links:
-  - name:         about
-    url:          /about
-    icon:         fi-torso
   - name:         mail
     url:          mailto:eye@eyenx.ch
     icon:         fi-mail
   - name:         twitter
-    url:          https://twitter.com/eyenx 
+    url:          https://twitter.com/eyenx
     icon:         fi-social-twitter
     external:     true
   - name:         github
@@ -22,6 +53,3 @@ links:
   - name:         rss
     url:          /rss.xml
     icon:         fi-rss
-highlighter:      pygments
-permalink:        /:year/:month/:day/:title/
-markdown:         kramdown
