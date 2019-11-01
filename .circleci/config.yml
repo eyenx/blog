@@ -9,7 +9,7 @@ jobs:
       - run:
           name: build image
           command: |
-            docker build -t eyenx/eyenx-ch:${CIRCLE_BRANCH} .
+            docker build -t eyenx/eyenx-ch:$(echo -n ${CIRCLE_BRANCH} | tr "/" "-") .
       - run:
           name: run test
           command: |
