@@ -1,0 +1,22 @@
+.about {
+    text-align:center;
+}
+
+section.post > div.MathJax_Display {
+    width:auto!important;
+}
+
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+}
+img.w10{width:10%;}
+img.w20{width:20%;}
+img.w30{width:30%;}
+img.w40{width:40%;}
+img.w50{width:50%;}
+img.w60{width:60%;}
+img.w70{width:70%;}
+img.w80{width:80%;}
+img.w90{width:90%;}
