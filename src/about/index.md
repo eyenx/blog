@@ -24,8 +24,7 @@ Currently, I'm living near **Basel, Switzerland**.
 Don't hesitate to follow me on <a style="border: none;" href='https://twitter.com/{{ site.twitter_username }}'>Twitter</a>.
 {: r}
 
-<!--<i class='fi-key medium'></i> <a style="border: none;" href='https://pgp.mit.edu/pks/lookup?op=get&search=0x0796132F0077A5F8'>0x0796132F0077A5F8</a>-->
-<i class='fi-key medium'></i> <a style="border: none;" href='/0x0796132F0077A5F8.txt'>0x0796132F0077A5F8</a>
+<i class='fi-key medium'></i> <a style="border: none;" href='https://pgp.pm/pks/lookup?op=get&search=0x0796132F0077A5F8'>0x0796132F0077A5F8</a>
 {: r}
 
 <i class='fi-bitcoin medium'></i> <a style="border: none;" href='bitcoin:16cSjkpDsN4Nd64aEq677NVf87C9Wrd9fY'>16cSjkpDsN4Nd64aEq677NVf87C9Wrd9fY</a>
