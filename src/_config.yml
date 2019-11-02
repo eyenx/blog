@@ -49,5 +49,5 @@ links:
     icon:         fi-social-github
     external:     true
   - name:         rss
-    url:          /rss.xml
+    url:          /feed.xml
     icon:         fi-rss
