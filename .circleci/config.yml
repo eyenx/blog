@@ -24,12 +24,10 @@ jobs:
             if [ "$CIRCLE_BERANCH" = "master" ] ; then docker tag eyenx/eyenx-ch:$(echo -n ${CIRCLE_BRANCH}|tr "/" "-") eyenx/eyenx-ch:latest &&  echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin && docker push eyenx/eyenx-ch:latest ; fi
   deploy:
     docker:
-      - image: alpine
+      - image: eyenx/drone-build-trigger
     steps:
       - run:
           name: run trigger to deploy 
-          command: |
-            apk --update add curl && LAST_BUILD=$(curl -H "Authorization: Bearer $DRONE_TOKEN" $DRONE_SERVER/api/repos/eyenx/$DRONE_REPO/builds | grep "number\":[0-9]\+" -o | cut -d: -f2 | head -1) && curl -H "Authorizaiton: Bearer $DRONE_TOKEN" $DRONE_SERVER/api/repos/eyenx/$DRONE_REPO/builds/$LAST_BUILD -X POST
 workflows:
   version: 2
   build_and_deploy:
