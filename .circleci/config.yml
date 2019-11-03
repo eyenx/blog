@@ -28,6 +28,7 @@ jobs:
     steps:
       - run:
           name: run trigger to deploy 
+          command: /entrypoint.sh
 workflows:
   version: 2
   build_and_deploy:
