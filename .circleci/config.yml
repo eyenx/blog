@@ -25,6 +25,7 @@ jobs:
   deploy:
     docker:
       - image: drone/cli
+    steps:
       - run:
           name: run trigger to deploy 
           command: |
