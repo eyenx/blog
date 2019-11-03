@@ -22,18 +22,39 @@ jobs:
           name: push image to latest if branch is master
           command: |
             if [ "$CIRCLE_BERANCH" = "master" ] ; then docker tag eyenx/eyenx-ch:$(echo -n ${CIRCLE_BRANCH}|tr "/" "-") eyenx/eyenx-ch:latest &&  echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin && docker push eyenx/eyenx-ch:latest ; fi
-  deploy:
+  deploy-master:
+    branches:
+      only:
+        - master
     docker:
       - image: eyenx/drone-build-trigger
     steps:
       - run:
           name: run trigger to deploy 
           command: /entrypoint.sh
+          environment:
+            DRONE_ARGS="-p eyenx.ch"
+  deploy-dev:
+    branches:
+      ignore:
+        - master
+    docker:
+      - image: eyenx/drone-build-trigger
+    steps:
+      - run:
+          name: run trigger to deploy 
+          command: /entrypoint.sh
+          environment:
+            DRONE_ARGS="-p dev.eyenx.ch"
+
 workflows:
   version: 2
-  build_and_deploy:
+  build_and_deploy-master:
     jobs:
       - build
-      - deploy:
+      - deploy-dev:
+          requires:
+            - build
+      - deploy-master:
           requires:
             - build
