@@ -29,7 +29,7 @@ jobs:
       - run:
           name: run trigger to deploy 
           command: |
-            apk --update add curl && LAST_BUILD=$(curl -H "Authorization: Bearer $DRONE_TOKEN" https://$DRONE_SERVER/api/repos/eyenx/$DRONE_REPO/builds | grep "number\":[0-9]\+" -o | cut -d: -f2 | head -1) && curl -H "Authorizaiton: Bearer $DRONE_TOKEN" https://$DRONE_SERVER/api/repos/eyenx/$DRONE_REPO/builds/$LAST_BUILD -X POST
+            apk --update add curl && LAST_BUILD=$(curl -H "Authorization: Bearer $DRONE_TOKEN" $DRONE_SERVER/api/repos/eyenx/$DRONE_REPO/builds | grep "number\":[0-9]\+" -o | cut -d: -f2 | head -1) && curl -H "Authorizaiton: Bearer $DRONE_TOKEN" $DRONE_SERVER/api/repos/eyenx/$DRONE_REPO/builds/$LAST_BUILD -X POST
 workflows:
   version: 2
   build_and_deploy:
