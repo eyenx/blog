@@ -4,17 +4,12 @@ title: about
 permalink: /about/
 group: navigation
 ---
-  Test deployment from phone.  
-
 
 
 <img src="/img/about.jpeg" width="25%" style="display:block;margin-left:auto;margin-right:auto;border-radius:50%" />
 {:r: .about}
 My name is **Antonio Tauro**, but everyone calls me **Toni**. 
 {: r}
-
-
-BLa 
 
 
 On the interwebs I may hide behind the nicknames **eyenx** or the shorter form **eye**.
