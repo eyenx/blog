@@ -30,7 +30,7 @@ jobs:
           name: run trigger to deploy 
           command: /entrypoint.sh
           environment:
-            DRONE_ARGS="-p eyenx.ch"
+            DRONE_ARGS: "-p eyenx.ch"
   deploy-dev:
     docker:
       - image: eyenx/drone-build-trigger
@@ -39,7 +39,7 @@ jobs:
           name: run trigger to deploy 
           command: /entrypoint.sh
           environment:
-            DRONE_ARGS="-p dev.eyenx.ch"
+            DRONE_ARGS: "-p dev.eyenx.ch"
 
 workflows:
   version: 2
