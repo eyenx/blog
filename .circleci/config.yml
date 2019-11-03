@@ -23,9 +23,6 @@ jobs:
           command: |
             if [ "$CIRCLE_BERANCH" = "master" ] ; then docker tag eyenx/eyenx-ch:$(echo -n ${CIRCLE_BRANCH}|tr "/" "-") eyenx/eyenx-ch:latest &&  echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin && docker push eyenx/eyenx-ch:latest ; fi
   deploy-master:
-    branches:
-      only:
-        - master
     docker:
       - image: eyenx/drone-build-trigger
     steps:
@@ -35,9 +32,6 @@ jobs:
           environment:
             DRONE_ARGS="-p eyenx.ch"
   deploy-dev:
-    branches:
-      ignore:
-        - master
     docker:
       - image: eyenx/drone-build-trigger
     steps:
@@ -55,6 +49,12 @@ workflows:
       - deploy-dev:
           requires:
             - build
+          filters:
+            branches:
+              ignore: master
       - deploy-master:
           requires:
             - build
+          filters:
+            branches:
+              only: master
