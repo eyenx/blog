@@ -1,0 +1,11 @@
+<nav class="nav">
+  <div class="nav-container">
+    <a href="{{ site.baseurl }}/">
+      <img src='/img/eyenx.png' style="display:inline;width:80px;margin-bottom:0px;"></img><h3 class="nav-title">{{ site.title }}</h3></a> {{ site.description }}
+    <ul>
+      <li><a href="{{ site.baseurl }}/">Home</a></li>
+      <li><a href="{{ '/about' | prepend: site.baseurl }}">About</a></li>
+      <li><a href="{{ '/feed.xml' | prepend: site.baseurl }}">RSS</a></li>
+    </ul>
+  </div>
+</nav>
