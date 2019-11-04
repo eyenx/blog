@@ -5,10 +5,12 @@ permalink: /about/
 group: navigation
 ---
 
+
 <img src="/img/about.jpeg" width="25%" style="display:block;margin-left:auto;margin-right:auto;border-radius:50%" />
 {:r: .about}
 My name is **Antonio Tauro**, but everyone calls me **Toni**. 
 {: r}
+
 
 On the interwebs I may hide behind the nicknames **eyenx** or the shorter form **eye**.
 I work as a **Linux Systems Engineer** and consider myself a geek, coder, **GNU/Linux** and **opensource** enthusiast.
