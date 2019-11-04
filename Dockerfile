@@ -2,20 +2,13 @@ FROM ruby:alpine as builder
 
 LABEL maintainer="eye@eyenx.ch"
 
-RUN apk update && apk upgrade && \ 
-apk add build-base python py-pip && \
-pip install --upgrade pip && \
-pip install pygments && \
-gem install github-pages jekyll \
-jekyll-redirect-from kramdown \
-pygments.rb 
+COPY src /src
 
 WORKDIR /src
 
-COPY src /src
-
-RUN jekyll b
-
+RUN apk update && apk upgrade && \ 
+apk add build-base && gem install bundler && \
+bundle && jekyll b
 
 FROM nginx:alpine 
 

@@ -1,14 +1,23 @@
-<link href='/img/favicon.png' rel='shortcut icon'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css' />
-<link href='/css/style.css' rel='stylesheet' type='text/css' />
-<link href='/css/syntax.css' rel='stylesheet' type='text/css' />
-<link href='/css/responsive.css' rel='stylesheet' type='text/css' />
-<link href='/css/custom.css' rel='stylesheet' type='text/css' />
-<link href='/css/foundation-icons.css' rel='stylesheet' type='text/css' />
-<!-- - -->
-<script src='/js/jquery.js' type='text/javascript'></script>
-<script src='/js/pd.js' type='text/javascript'></script>
-<script src='/js/basics.js' type='text/javascript'></script>
-<!-- - -->
-<meta content='width=device-width, initial-scale=1.0, user-scalable=no' name='viewport'>
-<meta content='text/html; charset=utf-8' http-equiv='content-type' />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {% seo %}
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/custom.css" | relative_url }}">
+  <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+
+
+  <!-- Favicon -->
+  <link href='/img/favicon.png' rel='shortcut icon'>
+
+  <!-- Fonts -->
+  <link href="{{ "/assets/foundation-icons.css" | relative_url }}" rel='stylesheet' type='text/css' />
+
+  <!-- RSS -->
+  {% feed_meta %}
+
+</head>
