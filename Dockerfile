@@ -7,8 +7,8 @@ COPY src /src
 WORKDIR /src
 
 RUN apk update && apk upgrade && \ 
-apk add build-base git && gem install bundler && \
-bundle && jekyll b
+apk add build-base && gem install bundler && \
+bundle && /usr/local/bundle/bin/jekyll b
 
 FROM nginx:alpine 
 
