@@ -6,7 +6,7 @@ group: navigation
 ---
 
 
-<img src="/img/about2019.jpg" width="25%" style="display:block;margin-left:auto;margin-right:auto;border-radius:50%" />
+<img src="/img/about2019.jpg" width="25%" style="display:block;margin-left:auto;margin-right:auto;border-radius:25%" />
 {:r: .about}
 My name is **Antonio Tauro**, but everyone calls me **Toni**. 
 {: r}
