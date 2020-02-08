@@ -124,7 +124,7 @@ Go check it [out](https://fosdem.org/2020/schedule/event/security_what_you_most_
 I start my day by joining the decentralized internet and privacy devroom. I will be staying in here a lot today. The first talk is about closing the lid of your laptop and actually encrypting the HD again (Encrypt on suspend). The talk gets quite technical but basically, the processes get freezed and memory saved to disk before the encryption happens. It's quite a hack and not at all stable, but it works.
 
 
-This time, the code is hosted on (debian.org](https://salsa.debian.org/mejo/cryptsetup-suspend).
+This time, the code is hosted on [debian.org](https://salsa.debian.org/mejo/cryptsetup-suspend).
 
 ### Identity Box
 
