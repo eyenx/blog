@@ -22,7 +22,7 @@ I spend my holidays mainly in Europe.
 Currently, I'm living near **Basel, Switzerland**.
 {: r}
 
-<i class='fi-key medium'></i> <a style="border: none;" href='https://pgp.pm/pks/lookup?op=get&search=0x0796132F0077A5F8'>0x0796132F0077A5F8</a>
+<i class='fi-key medium'></i> <a style="border: none;" href='/assets/pgp.pub'>32A6 3525 D40A 109B 6849  36BC 0796 132F 0077 A5F8</a>
 {: r}
 
 <i class='fi-bitcoin medium'></i> <a style="border: none;" href='bitcoin:16cSjkpDsN4Nd64aEq677NVf87C9Wrd9fY'>16cSjkpDsN4Nd64aEq677NVf87C9Wrd9fY</a>
