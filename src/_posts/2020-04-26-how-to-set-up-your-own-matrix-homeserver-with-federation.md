@@ -9,8 +9,6 @@ disqus: y
 
 
 
-# How to set up your own matrix.org homeserver with federation
-
 First of all let's get one thing out of the way. If think this will be a blog post about Keanu Reeves starring in his A-role you are wrong. Although I love The Matrix, and I'm talking just about the first movie, this blog post will be about setting up your own homeserver of [matrix.org](https://matrix.org). Matrix is an open network for secure, decentralized communication.
 
 "Oh yet another chat tool? I've got telegram running and I'm fine", you might think that. **BUT** Matrix isn't quite the same. It's **decentralized**. There isn't a central server. And it is also **federated** and of course: **opensource**.

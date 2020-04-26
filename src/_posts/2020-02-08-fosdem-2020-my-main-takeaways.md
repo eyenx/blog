@@ -9,7 +9,6 @@ disqus: y
 
 
 
-# FOSDEM 2020 - my main takeaways
 And here we go again. The second year in a row I find myself on a train directed to Bruxelles, Belgium. I will join the mass of hackers an professionals grouping at the Université libre de Bruxelles for this year's FOSDEM.
 
 I went through the schedule and bookmarked the most suited talks for me, while knowing that this won't be a fixed program as rooms get pretty full and I'll have to have a second plan ready.
