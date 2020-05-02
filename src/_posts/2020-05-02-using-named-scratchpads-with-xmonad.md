@@ -7,7 +7,7 @@ tags: [haskell,xmonad,windowmanager]
 disqus: y
 ---
 
-This will be a quick one. I always loved how i3 has this [scratchpad feature](https://i3wm.org/docs/userguide.html#_scratchpad) and wanted to use this also with my [xmonad](https://xmonad.org) setup.
+This will be a quick one. I always loved how i3 has the [scratchpad feature](https://i3wm.org/docs/userguide.html#_scratchpad) and wanted to use this also with my [xmonad](https://xmonad.org) setup.
 
 It didn't took me too long, to find out there is the [`XMonad.Util.NamedScratchpad`](https://hackage.haskell.org/package/xmonad-contrib-0.13/docs/XMonad-Util-NamedScratchpad.html) package which can be used to set up a number of scratchpads running different applications.
 
@@ -19,7 +19,7 @@ First of all, import the package in your `xmonad.hs`
 import XMonad.Util.NamedScratchpad
 ```
 
-Now we just need to write following code block to configure some scratchpads, as an example, I'll set up 3 different scratchpads.
+Now we just need to write following code block to configure some scratchpads. As an example, I'll set up 3 different scratchpads.
 
 * taskwarrior
 * simple terminal
@@ -42,13 +42,13 @@ scratchpads = [
 
 ```
 
-They will make use of the `classname` or `resource` of the window metadata. You can find out about those informations with a tool like [`xprop`](https://linux.die.net/man/1/xprop).
+I will make use of the `classname` or `resource` of the window metadata to map them correctly. You can find out about those informations with a tool like [`xprop`](https://linux.die.net/man/1/xprop).
 
 ```bash
 xprop | grep WM_CLASS
 ```
 
-Now you only need to select the window you want to have some information about and get the `WM_CLASS` outputted.
+Now you only need to select a window to find out it's `WM_CLASS`.
 
 ![xprop](/img/p/20200502_1.gif)
 
@@ -76,13 +76,13 @@ See [my xmonad.hs](https://github.com/eyenx/dotfiles/blob/master/.xmonad/xmonad.
 
 ## Terminals and their WM_CLASS
 
-As you can see from my gif, the terminal I am using is URxvt. All of my terminals will have the Classname `URxvt` so it seems impossible to get a Namedscratchpad working with terminal running a specific application (a.e. Taskwarrior).
+As you can see from my [gif](/img/p/20200502_1.gif), the terminal I am using is URxvt. All of my terminals will have the Classname `URxvt` so it seems impossible to get a named scratchpad working with a terminal running a specific application (a.e. Taskwarrior), because all `URxvt`terminals will have the same `WM_CLASS`.
 
-This is where the `-name` parameter comes into play. Thanks to this additional parameter a specific name get's set as `WM_CLASS` and I can use it to identify my scratchpads.
+This is where the `-name` parameter comes into play. Thanks to this additional parameter a specific name get's set as additional `WM_CLASS` and I can use it to identify my scratchpads.
 
 ## W.RationalRect?
 
-At last you should make use of `XMonad.StackSet.RationalRect`:
+At last you should consider making usage of `XMonad.StackSet.RationalRect`:
 
 ```haskell
 import XMonad.StackSet as W
