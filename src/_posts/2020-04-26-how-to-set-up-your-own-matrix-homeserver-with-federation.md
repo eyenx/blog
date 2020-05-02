@@ -207,4 +207,4 @@ This is very useful, as I can easily follow up on IRC with my smartphone. Yeah, 
 
 ## You used this tutorial with success? Contact me!
 
-If you managed to get synapse and federation working with this tutorial, I would appreciate if you would contact me. Of course you should do that through matrix: `@eyenx@eyenx.ch`
+If you managed to get synapse and federation working with this tutorial, I would appreciate if you would contact me. Of course you should do that through matrix: `@eyenx:eyenx.ch`
