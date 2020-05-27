@@ -4,7 +4,6 @@ title: "trying out kramdown"
 description: ""
 category: math
 tags: [math,jekyll,ruby]
-disqus: y
 share: n
 ---
 {% include mathjaxjs.html %}

@@ -4,7 +4,6 @@ title: "new design"
 description: ""
 category: announcement
 tags: [web,jekyll]
-disqus: y
 share: n
 ---
 

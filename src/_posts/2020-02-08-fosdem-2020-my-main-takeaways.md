@@ -4,7 +4,6 @@ title: "FOSDEM 2020 - my main takeaways"
 description: ""
 category: event
 tags: [docker,containers,fosdem,p2p,decentralized,kubernetes,security]
-disqus: y
 ---
 
 
