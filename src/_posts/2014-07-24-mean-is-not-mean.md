@@ -4,7 +4,6 @@ title: "mean is not mean"
 description: ""
 category: code
 tags: [nodejs,mongodb,angularjs,expressjs,js]
-disqus: y
 share: n
 ---
 

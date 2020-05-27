@@ -4,7 +4,6 @@ title: "Using named scratchpads with xmonad"
 description: ""
 category: howto
 tags: [haskell,xmonad,windowmanager]
-disqus: y
 ---
 
 This will be a quick one. I always loved how i3 has the [scratchpad feature](https://i3wm.org/docs/userguide.html#_scratchpad) and wanted to use this also with my [xmonad](https://xmonad.org) setup.

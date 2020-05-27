@@ -4,7 +4,6 @@ title: "disqus and more"
 description: ""
 category: "announcement"
 tags: []
-disqus: y
 share: n
 ---
 

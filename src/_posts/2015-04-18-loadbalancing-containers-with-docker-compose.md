@@ -4,7 +4,6 @@ title: "loadbalancing containers with docker-compose"
 description: ""
 category: howto
 tags: [docker,web,python,flask]
-disqus: y
 share: n
 ---
 

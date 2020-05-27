@@ -4,7 +4,6 @@ title: "my try hard blogging experience"
 description: ""
 category: announcement
 tags: [intro,jekyll]
-disqus: y
 share: n
 ---
 

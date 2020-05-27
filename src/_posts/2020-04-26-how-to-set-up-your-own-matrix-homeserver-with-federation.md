@@ -4,7 +4,6 @@ title: "How to set up your own matrix.org homeserver with federation!"
 description: ""
 category: howto
 tags: [docker,containers,matrix,p2p,decentralized,chat]
-disqus: y
 ---
 
 

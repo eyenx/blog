@@ -4,7 +4,6 @@ title: "automatic git deploy"
 description: ""
 category: webserver
 tags: [git,jekyll,nginx]
-disqus: y
 share: n
 ---
 

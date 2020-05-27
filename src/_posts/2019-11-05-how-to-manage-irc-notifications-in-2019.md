@@ -4,7 +4,6 @@ title: "How to manage IRC notifications in 2019"
 description: ""
 category: howto
 tags: [docker,web,python,websocket,go,irc]
-disqus: y
 ---
 
 What? IRC? There are still people using it? Yes, there are. 
