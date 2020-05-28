@@ -165,7 +165,7 @@ For my part it was pretty easy. Just include this block at the end of your posts
 
 ```html
 <div class="block">
-<script data-isso="https://isso.domaint.tld/" data-isso-require-author="true" # overwriting spam guard preferences data-isso-avatar="false" src="https://isso.domain.tld/js/embed.min.js"></script> 
+<script data-isso="https://isso.domain.tld/" data-isso-require-author="true" # overwriting spam guard preferences data-isso-avatar="false" src="https://isso.domain.tld/js/embed.min.js"></script> 
 <section id="isso-thread"></section>
 </div>
 ```
