@@ -181,3 +181,8 @@ The easiest fix for me was obviously to read the whole code of Isso and create a
 # final words
 
 This was quite a big change for only hosting 18 comments IMHO. But I've got now a good feeling about it because I'm not hosting the comments somewhere on a third party provider anymore, but have them under my complete control.
+
+
+# EDIT
+
+I created a [repository](https://github.com/eyenx/docker-isso) to automatically build Isso in a container. It will be available under [eyenx/isso](https://hub.docker.com/r/eyenx/isso).
