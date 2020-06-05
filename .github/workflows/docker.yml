@@ -21,7 +21,7 @@ jobs:
           tag_with_sha: true
       - name: trigger deployment
         run: |
-          docker run -e DRONE_ARGS=$DRONE_ARGS -e DRONE_TOKEN=$DRONE_TOKEN -e DRONE_SERVER=$DRONE_SERVER eyenx/drone-build-trigger
+          docker run -e DRONE_ARGS -e DRONE_TOKEN -e DRONE_SERVER eyenx/drone-build-trigger
         env:
           DRONE_SERVER: ${{ secrets.DRONE_SERVER }}
           DRONE_TOKEN: ${{ secrets.DRONE_TOKEN }}
