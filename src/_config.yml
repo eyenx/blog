@@ -3,7 +3,6 @@ title:          eyenx
 description:    "yet another geek"
 url:            "https://eyenx.ch"
 
-
 # Author
 author:
   name:         eyenx
@@ -11,7 +10,7 @@ author:
   email:        eye@eyenx.ch
 
 # Build settings
-markdown:       kramdown
+markdown: kramdown
 include:
   - _pages
   - .well-known
@@ -30,13 +29,9 @@ plugins:
 # Permalinks
 permalink:      /:year/:month/:day/:title/
 paginate:       15
-#highlighter: pygments
 
 # Excludes
 exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
-
-# Disqus
-disqus_shortname: eyenx
 
 # links
 links:

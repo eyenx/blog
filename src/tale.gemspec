@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "tale"
-  spec.version       = "0.1.8"
+  spec.version       = "0.2.0"
   spec.authors       = ["Chester How"]
   spec.email         = ["chesterhow@gmail.com"]
 
@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/chesterhow/tale"
   spec.license       = "MIT"
 
-  spec.add_runtime_dependency "jekyll", "~> 3.6"
+  spec.add_runtime_dependency "jekyll", "~> 4.0"
   spec.add_runtime_dependency "jekyll-paginate", "~> 1.1"
   spec.add_runtime_dependency "jekyll-feed", "~> 0.10"
   spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.5"
