@@ -36,7 +36,7 @@ exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
 # links
 links:
   - name:         mail
-    url:          mailto:eye@eyenx.ch
+    url:          mailto:&#101;&#121;&#101;&#064;&#101;&#121;&#101;&#110;&#120;&#046;&#099;&#104;
     icon:         fi-mail
   - name:         twitter
     url:          https://twitter.com/eyenx
