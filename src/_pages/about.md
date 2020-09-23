@@ -6,8 +6,10 @@ group: navigation
 ---
 
 
-My name is **Antonio Tauro**, but everyone calls me **Toni**. 
 {:r: .about}
+
+My name is **Antonio Tauro**, but everyone calls me **Toni**. 
+{: r}
 
 
 On the interwebs I hide behind the nickname **eyenx**.
