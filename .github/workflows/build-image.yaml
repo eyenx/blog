@@ -25,7 +25,7 @@ jobs:
       - name: Prepare Image Metadata
         id: prep
         run: |
-          DOCKER_IMAGE=eyenx/eyenx.ch
+          DOCKER_IMAGE=eyenx/eyenx-ch
           VERSION=noop
           if [ "${{ github.event_name }}" = "schedule" ]; then
             VERSION=nightly
