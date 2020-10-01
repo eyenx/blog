@@ -82,7 +82,7 @@ jobs:
           DRONE_REPO: ${{ secrets.DRONE_REPO }}
           DRONE_ARGS: "-p DEPLOY=eyenx.ch"
       - name: trigger microbadger
-        uses: joelwmale/webhook-action@v2
+        uses: joelwmale/webhook-action@v2.0.2
         with:
           url: ${{ secrets.MICROBADGER_WEBHOOK }}
 
