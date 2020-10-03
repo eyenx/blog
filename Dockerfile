@@ -1,5 +1,7 @@
 FROM ruby:alpine as builder
 
+LABEL org.opencontainers.image.authors="eye@eyenx.ch"
+ 
 COPY src /src
 
 WORKDIR /src
