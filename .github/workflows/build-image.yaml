@@ -83,7 +83,7 @@ jobs:
           DRONE_ARGS: "-p DEPLOY=eyenx.ch"
       - name: trigger microbadger
         run: |
-          curl -X POST $MICROBADGER_WEBHOOK
+          curl --silent -X POST $MICROBADGER_WEBHOOK  &>/dev/null
         env:
           MICROBADGER_WEBHOOK: ${{ secrets.MICROBADGER_WEBHOOK }}
 
