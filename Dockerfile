@@ -1,7 +1,5 @@
 FROM ruby:alpine as builder
 
-LABEL maintainer="eye@eyenx.ch"
-
 COPY src /src
 
 WORKDIR /src
