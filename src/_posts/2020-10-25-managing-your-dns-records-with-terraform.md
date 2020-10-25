@@ -182,8 +182,6 @@ steps:
         from_secret: tf_var_do_token
       AWS_SECRET_ACCESS_KEY:
         from_secret: aws_secret_access_key
-      AWS_SECRET_ACCESS_KEY:
-        from_secret: aws_secret_access_key
       AWS_ACCESS_KEY_ID:
         from_secret: aws_access_key_id
     when:
