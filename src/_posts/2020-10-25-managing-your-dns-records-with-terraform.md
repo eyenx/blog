@@ -38,8 +38,10 @@ terraform {
   # DigitalOcean uses the S3 spec.
   backend "s3" {
     bucket = "mybucketname"
-    key    = "terraform.tfstate" # filename to use for saving our tfstate
-    endpoint = "https://ams1.digitaloceanspaces.com" # depends where you are setting up the space (fra1/ams1 etc..)
+    # filename to use for saving our tfstate
+    key    = "terraform.tfstate" 
+    # depends where you are setting up the space (fra1/ams1 etc..)
+    endpoint = "https://ams1.digitaloceanspaces.com" 
     # DO uses the S3 format
     # eu-west-1 is used to pass TF validation
     region = "eu-west-1" 
@@ -49,7 +51,8 @@ terraform {
   }
 }
 
-variable "do_token" {} # our digitalocean api token
+# our digitalocean api token
+variable "do_token" {} 
 
 provider "digitalocean" {
   token = var.do_token 
@@ -115,7 +118,8 @@ What we now need is a init, plan & apply to finish this up. But first we will ha
 ```bash
 
 export TF_VAR_do_token=SECRET_API_TOKEN
-export AWS_ACCESS_KEY_ID=KEY_ID_FOR_ACCESS_TO_DO_SPACE # has nothing to do with AWS, it's still Digitalocean, but terraform's s3 backend reads this
+# has nothing to do with AWS, it's still Digitalocean, but terraform's s3 backend reads this
+export AWS_ACCESS_KEY_ID=KEY_ID_FOR_ACCESS_TO_DO_SPACE 
 export AWS_SECRET_ACCESS_KEY=ACCES_KEY_FOR_ACCESS_TO_DO_SPACE 
 
 terraform init
@@ -172,7 +176,8 @@ steps:
       - terraform init
       - terraform plan
       - terraform apply -auto-approve
-    environment: # keep your secrets secret and not inside GIT!
+    # keep your secrets secret and not inside GIT!
+    environment:
       TF_VAR_do_token:
         from_secret: tf_var_do_token
       AWS_SECRET_ACCESS_KEY:
