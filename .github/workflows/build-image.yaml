@@ -76,7 +76,7 @@ jobs:
             org.opencontainers.image.licenses=${{ github.event.repository.license.spdx_id }}
       - name: trigger deployment
         run: |
-          docker run -e DRONE_REPO -e DRONE_ARGS -e DRONE_TOKEN -e DRONE_SERVER eyenx/drone-build-trigger
+          docker run -e DRONE_REPO -e DRONE_ARGS -e DRONE_TOKEN -e DRONE_SERVER ghcr.io/eyenx/drone-build-trigger
         env:
           DRONE_SERVER: ${{ secrets.DRONE_SERVER }}
           DRONE_TOKEN: ${{ secrets.DRONE_TOKEN }}
