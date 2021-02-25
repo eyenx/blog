@@ -1,6 +1,6 @@
 FROM ruby:alpine as builder
 
-LABEL org.opencontainers.image.authors="eye@eyenx.ch"
+LABEL org.opencontainers.image.authors="Toni Tauro <eye@eyenx.ch>"
  
 COPY src /src
 
