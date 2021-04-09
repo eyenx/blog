@@ -82,3 +82,4 @@ jobs:
           DRONE_TOKEN: ${{ secrets.DRONE_TOKEN }}
           DRONE_REPO: ${{ secrets.DRONE_REPO }}
           DRONE_ARGS: "-p DEPLOY=eyenx.ch"
+          COMMIT_SHA: "${GITHUB_SHA}"
