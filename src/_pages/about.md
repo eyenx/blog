@@ -22,7 +22,7 @@ I spend my holidays mainly in Europe.
 Currently, I'm living near **Basel, Switzerland**.
 {: r}
 
-Find me on these platforms, send me an <a href="mailto:&#101;&#121;&#101;&#064;&#101;&#121;&#101;&#110;&#120;&#046;&#099;&#104;">email</a> or chat with me directly on <a href="https://matrix.to/#/@eyenx:eyenx.ch">matrix</a> or on <a href="https://freenode.net/">irc.freenode.net</a> at eyenx.
+Find me on these platforms, send me an <a href="mailto:&#101;&#121;&#101;&#064;&#101;&#121;&#101;&#110;&#120;&#046;&#099;&#104;">email</a> or chat with me directly on <a href="https://matrix.to/#/@eyenx:eyenx.ch">matrix</a> or on <a href="https://libera.chat/">irc.libera.chat</a> at eyenx.
 {: r}
 
 <i class='fi-key medium'></i> <a style="border: none;" href='/assets/pgp.pub'>32A6 3525 D40A 109B 6849  36BC 0796 132F 0077 A5F8</a>
