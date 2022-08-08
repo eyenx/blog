@@ -8,7 +8,7 @@ group: navigation
 
 {:r: .about}
 
-My name is **Antonio Tauro**, but everyone calls me **Toni**. 
+My name is **Antonio**, but everyone calls me **Toni**. 
 {: r}
 
 
