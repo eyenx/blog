@@ -43,6 +43,17 @@ links:
     url:          https://twitter.com/eyenx
     icon:         fi-social-twitter
     external:     true
+  - name:         mastodon
+    url:          https://mastodon.social/@eyenx
+    icon:         fi-social-mastodon
+    external:     true
+  - name:         github
+    url:          https://github.com/eyenx
+    icon:         fi-social-github
+    external:     true
+  - name:         rss
+    url:          /feed.xml
+    icon:         fi-rss
   - name:         github
     url:          https://github.com/eyenx
     icon:         fi-social-github
