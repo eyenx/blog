@@ -45,7 +45,7 @@ links:
     external:     true
   - name:         mastodon
     url:          https://mastodon.social/@eyenx
-    icon:         fi-torso
+    icon:         "fab fa-mastodon"
     external:     true
   - name:         github
     url:          https://github.com/eyenx
