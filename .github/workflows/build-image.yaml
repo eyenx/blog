@@ -50,14 +50,6 @@ jobs:
           labels: |
             ${{ steps.meta.output.labels }}
             io.artifacthub.package.readme-url=https://raw.githubusercontent.com/${{ github.repository }}/${{ github.event.repository.default_branch }}/README.md
-            org.opencontainers.image.title=${{ github.event.repository.name }}
-            org.opencontainers.image.description=${{ github.event.repository.description }}
-            org.opencontainers.image.url=${{ github.event.repository.html_url }}
-            org.opencontainers.image.source=${{ github.event.repository.clone_url }}
-            org.opencontainers.image.version=${{ steps.prep.outputs.version }}
-            org.opencontainers.image.created=${{ steps.prep.outputs.created }}
-            org.opencontainers.image.revision=${{ github.sha }}
-            org.opencontainers.image.licenses=${{ github.event.repository.license.spdx_id }}
       - name: trigger deployment
         run: |
           docker run -e DRONE_REPO -e DRONE_ARGS -e DRONE_TOKEN -e DRONE_SERVER ghcr.io/eyenx/drone-build-trigger
