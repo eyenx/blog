@@ -1,4 +1,4 @@
-FROM ruby:alpine as builder
+FROM ruby as builder
 
 LABEL org.opencontainers.image.authors="Toni Tauro <eye@eyenx.ch>"
  
@@ -6,8 +6,8 @@ COPY src /src
 
 WORKDIR /src
 
-RUN apk update && apk upgrade && \ 
-apk add build-base git && gem install bundler && \
+RUN apt update && apt full-upgrade -y && \
+gem install bundler && \
 bundle && bundle exec jekyll b
 
 FROM nginx:alpine 
