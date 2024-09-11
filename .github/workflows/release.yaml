@@ -1,0 +1,66 @@
+name: build image
+
+on:
+  schedule:
+    - cron: "3 3 * * *"
+  pull_request:
+  push:
+    branches: main
+    tags:
+      - "v*"
+
+jobs:
+  build-container:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create metadata
+        id: metadata
+        uses: docker/metadata-action@v5
+        with:
+          images: |
+            ghcr.io/eyenx/blog
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=schedule,pattern=nightly
+            type=semver,pattern=v{{version}}
+            type=semver,pattern=v{{major}}.{{minor}}
+            type=semver,pattern=v{{major}}
+
+      - name: Login to GHCR
+        uses: redhat-actions/podman-login@v1
+        id: login
+        if: startsWith(github.ref, 'refs/tags/v')
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.PAT }}
+
+      - name: Build
+        uses: redhat-actions/buildah-build@v2
+        id: build
+        with:
+          image: blog
+          layers: false
+          tags: ${{ steps.metadata.outputs.tags }}
+          labels: ${{ steps.metadata.outputs.labels }}
+          containerfiles: |
+            ./Containerfile
+
+      - name: Echo Results
+        run: |
+          echo "Image: ${{ steps.build.outputs.image }}"
+          echo "Tags: ${{ steps.build.outputs.tags }}"
+          echo "Tagged Image: ${{ steps.build.outputs.image-with-tag }}"
+
+      - name: Push
+        id: push
+        uses: redhat-actions/push-to-registry@v2
+        if: startsWith(github.ref, 'refs/tags/v')
+        with:
+          image: ${{ steps.build.outputs.image }}
+          tags: ${{ steps.build.outputs.tags }}
+          registry: ghcr.io/eyenx

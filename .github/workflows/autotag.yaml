@@ -4,13 +4,17 @@ on:
     branches:
       - main
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
       - name: Run go-semantic-release
         id: semrel
-        uses: go-semantic-release/action@v1.15
+        uses: go-semantic-release/action@v1.21
         with:
           github-token: ${{ secrets.PAT }}
           allow-initial-development-versions: true
