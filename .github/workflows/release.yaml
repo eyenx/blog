@@ -48,7 +48,7 @@ jobs:
           tags: ${{ steps.metadata.outputs.tags }}
           labels: ${{ steps.metadata.outputs.labels }}
           containerfiles: |
-            ./Dockerfile
+            ./Containerfile
 
       - name: Echo Results
         run: |
