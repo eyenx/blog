@@ -6,6 +6,8 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    permissions:
+      releases: write
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -16,5 +18,5 @@ jobs:
         id: semrel
         uses: go-semantic-release/action@v1.21
         with:
-          github-token: ${{ secrets.PAT }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           allow-initial-development-versions: true
