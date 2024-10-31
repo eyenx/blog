@@ -64,3 +64,11 @@ jobs:
           image: ${{ steps.build.outputs.image }}
           tags: ${{ steps.build.outputs.tags }}
           registry: ghcr.io/eyenx
+
+      - name: Attest
+        uses: actions/attest-build-provenance@v1
+        id: attest
+        with:
+          subject-name: ghcr.io/eyenx/blog
+          subject-digest: ${{ steps.push.outputs.digest }}
+          push-to-registry: true
