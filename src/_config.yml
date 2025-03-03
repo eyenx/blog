@@ -1,13 +1,13 @@
 # Site settings
-title:          eyenx
-description:    "yet another geek"
-url:            "https://eyenx.ch"
+title: eyenx
+description: "yet another geek"
+url: "https://eyenx.ch"
 
 # Author
 author:
-  name:         eyenx
-  url:          https://eyenx.ch
-  email:        eye@eyenx.ch
+  name: eyenx
+  url: https://eyenx.ch
+  email: eye@eyenx.ch
 
 # Build settings
 markdown: kramdown
@@ -17,8 +17,8 @@ include:
 
 # Assets
 sass:
-  sass_dir:     _sass
-  style:        compressed
+  sass_dir: _sass
+  style: compressed
 
 # Gems
 plugins:
@@ -28,29 +28,25 @@ plugins:
   - jekyll-sitemap
 
 # Permalinks
-permalink:      /:year/:month/:day/:title/
-paginate:       15
+permalink: /:year/:month/:day/:title/
+paginate: 15
 
 # Excludes
-exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
+exclude: [Gemfile, Gemfile.lock, tale.gemspec]
 
 # links
 links:
-  - name:         mail
-    url:          mailto:&#101;&#121;&#101;&#064;&#101;&#121;&#101;&#110;&#120;&#046;&#099;&#104;
-    icon:         fi-mail
-  - name:         twitter
-    url:          https://twitter.com/eyenx
-    icon:         fi-social-twitter
-    external:     true
-  - name:         mastodon
-    url:          https://mastodon.social/@eyenx
-    icon:         "fab fa-mastodon"
-    external:     true
-  - name:         github
-    url:          https://github.com/eyenx
-    icon:         fi-social-github
-    external:     true
-  - name:         rss
-    url:          /feed.xml
-    icon:         fi-rss
+  - name: mail
+    url: mailto:&#101;&#121;&#101;&#064;&#101;&#121;&#101;&#110;&#120;&#046;&#099;&#104;
+    icon: fi-mail
+  - name: mastodon
+    url: https://mastodon.social/@eyenx
+    icon: "fab fa-mastodon"
+    external: true
+  - name: github
+    url: https://github.com/eyenx
+    icon: fi-social-github
+    external: true
+  - name: rss
+    url: /feed.xml
+    icon: fi-rss
