@@ -56,7 +56,7 @@ pages:
       - public
 ```
 
-This configuration uses the container image from [l-trump/logseq-publish-spa](https://github.com/l-trump/logseq-publish-spa), which simplifies the process.
+This configuration uses the container image from [L-Trump/logseq-publish-docker](https://github.com/l-trump/logseq-publish-docker), which simplifies the process.
 
 Commit this file to your repository and watch the automation in action:
 
