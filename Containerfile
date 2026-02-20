@@ -1,4 +1,4 @@
-FROM ruby as builder
+FROM docker.io/library/ruby as builder
 
 LABEL org.opencontainers.image.authors="Toni Tauro <eye@eyenx.ch>"
  
@@ -10,7 +10,7 @@ RUN apt update && apt full-upgrade -y && \
 gem install bundler && \
 bundle && bundle exec jekyll b
 
-FROM nginx:alpine 
+FROM docker.io/library/nginx:alpine 
 
 LABEL maintainer="eye@eyenx.ch"
 
