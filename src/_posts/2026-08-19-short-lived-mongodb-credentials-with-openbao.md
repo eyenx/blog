@@ -67,7 +67,7 @@ bao write database/config/mongodb \
     password=PASSWORD
 ```
 
-**DISCLAIMER** TLS is disabled in this example. For production purposes, please enable TLS.
+**DISCLAIMER** TLS is disabled in this example. For production, set `tls=true` in `connection_url` and configure MongoDB TLS certificates appropriately.
 
 ## Step 4: Creating a Role for Dynamic Credentials
 
