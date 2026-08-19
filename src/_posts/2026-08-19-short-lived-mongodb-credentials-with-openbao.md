@@ -99,7 +99,7 @@ lease_id            database/creds/mongo-role/mo7HNOLvmIoAp9VQJpkxk1IX
 lease_duration      1h
 lease_renewable     true
 password            NUXLw56O-dAGw1FfaJc-
-username            v-userpass-openba-mongo-role-R888IbZtrlPwgTaLOol1-1787120741
+username            v-userpass-openbao-mongo-role-R888IbZtrlPwgTaLOol1-1787120741
 ```
 
 OpenBao generates a unique temporary username and strong password specifically for this request.
