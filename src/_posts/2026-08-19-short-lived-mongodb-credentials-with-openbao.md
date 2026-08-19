@@ -109,7 +109,7 @@ OpenBao generates a unique temporary username and strong password specifically f
 Finally, verify that the generated dynamic credentials work by logging into MongoDB with `mongosh`:
 
 ```bash
-mongodb@mongodb-0:/$ /usr/bin/mongosh openbao -u v-userpass-openba-mongo-role-R888IbZtrlPwgTaLOol1-1787120741
+mongodb@mongodb-0:/$ /usr/bin/mongosh openbao -u v-userpass-openbao-mongo-role-R888IbZtrlPwgTaLOol1-1787120741
 Enter password: ********************
 ```
 
