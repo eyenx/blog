@@ -56,7 +56,7 @@ bao secrets enable database
 
 ## Step 3: Configuring the MongoDB Connection
 
-Now, configure OpenBao with the administrative connection details to your MongoDB cluster. Replace `PASSWORD` with your administrative password.
+Now, configure OpenBao with the administrative connection details to your MongoDB cluster.
 
 ```bash
 bao write database/config/mongodb \
@@ -64,7 +64,7 @@ bao write database/config/mongodb \
     allowed_roles=mongo-role \
     connection_url="mongodb://{{username}}:{{password}}@mongodb.mongodb.svc.cluster.local:27017/admin?tls=false" \
     username=admin \
-    password=PASSWORD
+    password=******
 ```
 
 **DISCLAIMER** TLS is disabled in this example. For production, set `tls=true` in `connection_url` and configure MongoDB TLS certificates appropriately.
@@ -98,7 +98,7 @@ Key                 Value
 lease_id            database/creds/mongo-role/mo7HNOLvmIoAp9VQJpkxk1IX
 lease_duration      1h
 lease_renewable     true
-password            NUXLw56O-dAGw1FfaJc-
+password            ******
 username            v-userpass-openbao-mongo-role-R888IbZtrlPwgTaLOol1-1787120741
 ```
 
