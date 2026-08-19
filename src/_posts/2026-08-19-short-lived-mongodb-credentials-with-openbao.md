@@ -31,7 +31,7 @@ plugin "database" "mongodb" {
   image       = "ghcr.io/openbao/openbao-plugin-database-mongodb"
   version     = "v0.0.1"
   binary_name = "openbao-plugin-database-mongodb"
-  sha256sum   = "2fc346826f30755136af974bcb42f0578747722cf49a7bb5c20c3fbb9eb01e47" # verify this
+  sha256sum   = "2fc346826f30755136af974bcb42f0578747722cf49a7bb5c20c3fbb9eb01e47"
 }
 ```
 
