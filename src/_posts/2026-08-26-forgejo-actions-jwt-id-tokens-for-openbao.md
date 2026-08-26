@@ -65,7 +65,7 @@ bao write auth/forgejo/role/forgejo - <<EOF
 EOF
 ```
 
-Log in during your pipeline:
+Log in during your pipeline and export `BAO_TOKEN` for subsequent `bao` commands:
 
 ```bash
 bao write -format=json auth/forgejo/login role=forgejo jwt=$(cat /tmp/jwt) | jq -r .auth.client_token > /tmp/.bao-token
