@@ -96,7 +96,7 @@ footer {
   }
 
   &-title {
-    font-size: 1.45rem;
+    font-size: clamp(1.25rem, 4vw, 1.5rem);
     line-height: 1.25;
     margin: .35rem 0;
   }
@@ -140,6 +140,7 @@ footer {
 
   blockquote {
     border-left: .2rem solid $ink;
+    color: $muted;
     margin: 1.5rem 0;
     padding-left: 1rem;
   }
