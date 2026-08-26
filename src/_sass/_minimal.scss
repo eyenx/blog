@@ -138,7 +138,7 @@ footer {
   }
 
   blockquote {
-    border-left: .2rem solid $line;
+    border-left: .2rem solid $muted;
     color: $muted;
     margin: 1.5rem 0;
     padding-left: 1rem;
@@ -151,6 +151,7 @@ footer {
   }
 
   code {
+    border-radius: .2rem;
     padding: .1em .3em;
   }
 
