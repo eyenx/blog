@@ -2,6 +2,7 @@ $ink: #1f2933;
 $muted: #6b7280;
 $line: #e5e7eb;
 $link: #2563eb;
+$surface: #f3f4f6;
 
 * {
   box-sizing: border-box;
@@ -138,15 +139,14 @@ footer {
   }
 
   blockquote {
-    border-left: .2rem solid $muted;
-    color: $muted;
+    border-left: .2rem solid $ink;
     margin: 1.5rem 0;
     padding-left: 1rem;
   }
 
   pre,
   code {
-    background: #f3f4f6;
+    background: $surface;
     font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
   }
 
