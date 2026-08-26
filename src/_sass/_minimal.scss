@@ -1,0 +1,259 @@
+$ink: #17212b;
+$muted: #68727d;
+$line: #e4e8eb;
+$surface: #f8fafb;
+$accent: #087e8b;
+$code: #f1f4f6;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color: $ink;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: rgba($accent, .45);
+  text-underline-offset: .18em;
+
+  &:hover,
+  &:focus {
+    color: $accent;
+  }
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+main,
+.nav-container,
+footer {
+  margin: 0 auto;
+  max-width: 46rem;
+  width: calc(100% - 2.5rem);
+}
+
+.nav {
+  border-bottom: 1px solid $line;
+
+  &-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    min-height: 5.5rem;
+  }
+
+  &-brand {
+    align-items: center;
+    display: flex;
+    font-size: .9rem;
+    gap: .7rem;
+    text-decoration: none;
+
+    img {
+      border-radius: 50%;
+      display: block;
+    }
+
+    span {
+      display: grid;
+    }
+
+    small {
+      color: $muted;
+      font-size: .75rem;
+    }
+  }
+
+  ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    font-size: .875rem;
+  }
+}
+
+.catalogue {
+  padding: 2.5rem 0;
+
+  &-item {
+    border-bottom: 1px solid $line;
+    display: block;
+    padding: 1.75rem 0;
+    text-decoration: none;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:hover .catalogue-title,
+    &:focus .catalogue-title {
+      color: $accent;
+    }
+  }
+
+  &-pinned,
+  &-time {
+    color: $muted;
+    font-size: .8rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+
+  &-title {
+    font-size: clamp(1.3rem, 3vw, 1.7rem);
+    letter-spacing: -.03em;
+    line-height: 1.2;
+    margin: .45rem 0;
+    transition: color .15s ease;
+  }
+
+  p {
+    color: $muted;
+    margin: 0;
+  }
+}
+
+.post {
+  padding: 4rem 0;
+
+  &-info {
+    color: $muted;
+    font-size: .85rem;
+  }
+
+  &-title {
+    font-size: clamp(2.2rem, 7vw, 3.5rem);
+    letter-spacing: -.055em;
+    line-height: 1.05;
+    margin: .5rem 0 2.5rem;
+  }
+
+  h2,
+  h3,
+  h4 {
+    letter-spacing: -.025em;
+    line-height: 1.2;
+    margin: 2.25rem 0 .75rem;
+  }
+
+  p,
+  li {
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+    font-size: 1.1rem;
+  }
+
+  p {
+    margin: 0 0 1.4rem;
+  }
+
+  a {
+    color: $accent;
+  }
+
+  blockquote {
+    border-left: .2rem solid $accent;
+    color: $muted;
+    margin: 1.5rem 0;
+    padding-left: 1rem;
+  }
+
+  pre,
+  code {
+    background: $code;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  }
+
+  code {
+    border-radius: .2rem;
+    font-size: .9em;
+    padding: .12em .3em;
+  }
+
+  pre {
+    overflow-x: auto;
+    padding: 1rem;
+
+    code {
+      padding: 0;
+    }
+  }
+}
+
+.pagination {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 3rem;
+
+  .arrow,
+  .top {
+    color: $accent;
+    font-size: .9rem;
+  }
+}
+
+footer {
+  border-top: 1px solid $line;
+  color: $muted;
+  font-size: .8rem;
+  padding: 2rem 0 3rem;
+}
+
+@media (max-width: 34rem) {
+  .nav-container {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding: .9rem 0;
+  }
+
+  .post {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background: #101619;
+    color: #e9eff2;
+  }
+
+  .nav,
+  .catalogue-item,
+  footer {
+    border-color: #293238;
+  }
+
+  .catalogue p,
+  .catalogue-pinned,
+  .catalogue-time,
+  .post-info,
+  footer,
+  .nav small,
+  .post blockquote {
+    color: #aab6bd;
+  }
+
+  .post pre,
+  .post code {
+    background: #1c252a;
+  }
+}

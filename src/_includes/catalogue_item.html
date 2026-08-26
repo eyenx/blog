@@ -5,8 +5,6 @@
     {% endif %}
     <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
     <h1 class="catalogue-title">{{ post.title }}</h1>
-    <div class="catalogue-line"></div>
-
     <p>
       {% if post.excerpt_separator %}
         {{ post.excerpt | strip_html }}
