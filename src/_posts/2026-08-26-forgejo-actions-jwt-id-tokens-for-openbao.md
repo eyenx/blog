@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Forgejo Actions JWT ID Tokens for OpenBao"
-description: "Leanr how to use Forgejo Actions JWT ID Tokens for secure, short-lived authentication in automation workflows."
+description: "Learn how to use Forgejo Actions JWT ID Tokens for secure, short-lived authentication in automation workflows."
 category: howto
 tags: [forgejo, openbao, secrets, opentofu, jwt]
 ---
