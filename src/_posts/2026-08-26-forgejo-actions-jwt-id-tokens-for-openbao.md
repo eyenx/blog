@@ -25,7 +25,7 @@ Retrieve the JWT token using a simple curl command:
 ```yaml
 - name: get jwt
   run: |
-    curl -qH "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=https://audience.example.com" | /tmp/jq .value -r > /tmp/jwt
+    curl -qH "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=https://audience.example.com" | jq -r '.value' > /tmp/jwt
 ```
 
 This token, stored in `/tmp/jwt`, can be used for authentication with third-party services.
