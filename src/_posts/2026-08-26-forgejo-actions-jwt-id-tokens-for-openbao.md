@@ -73,7 +73,7 @@ bao write -format=json auth/forgejo/login role=forgejo jwt=$(cat /tmp/jwt) | jq 
 
 ## Integrating with OpenTofu
 
-For OpenTofu, export the JWT as `TERRAFORM_VAULT_AUTH_JWT` and execute your Terraform commands:
+For OpenTofu, export the JWT as `TERRAFORM_VAULT_AUTH_JWT` and execute your OpenTofu commands:
 
 ```bash
 export TERRAFORM_VAULT_AUTH_JWT=$(cat /tmp/jwt)
