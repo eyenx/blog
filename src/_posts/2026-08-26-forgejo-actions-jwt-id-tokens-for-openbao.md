@@ -44,7 +44,7 @@ Set up the OpenID configuration:
 bao write auth/forgejo/config oidc_discovery_url="https://forgejo.example.com/api/actions"
 ```
 
-Create a policy and role with appropriate permissions:
+Create a policy and role with appropriate permissions (avoid wildcard policies in production; scope to only the specific paths/capabilities your workflow needs):
 
 ```bash
 bao policy write forgejo - <<EOF
