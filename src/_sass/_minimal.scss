@@ -1,9 +1,7 @@
-$ink: #17212b;
-$muted: #68727d;
-$line: #e4e8eb;
-$surface: #f8fafb;
-$accent: #087e8b;
-$code: #f1f4f6;
+$ink: #1f2933;
+$muted: #6b7280;
+$line: #e5e7eb;
+$link: #2563eb;
 
 * {
   box-sizing: border-box;
@@ -11,9 +9,9 @@ $code: #f1f4f6;
 
 html {
   color: $ink;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 16px;
-  line-height: 1.65;
+  line-height: 1.6;
   scroll-behavior: smooth;
 }
 
@@ -22,13 +20,13 @@ body {
 }
 
 a {
-  color: inherit;
-  text-decoration-color: rgba($accent, .45);
-  text-underline-offset: .18em;
+  color: $link;
+  text-decoration: none;
 
   &:hover,
   &:focus {
-    color: $accent;
+    text-decoration: underline;
+    text-underline-offset: .2em;
   }
 }
 
@@ -41,8 +39,8 @@ main,
 .nav-container,
 footer {
   margin: 0 auto;
-  max-width: 46rem;
-  width: calc(100% - 2.5rem);
+  max-width: 42rem;
+  width: calc(100% - 2rem);
 }
 
 .nav {
@@ -52,60 +50,41 @@ footer {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    min-height: 5.5rem;
+    min-height: 4.5rem;
   }
 
   &-brand {
-    align-items: center;
-    display: flex;
-    font-size: .9rem;
-    gap: .7rem;
+    color: $ink;
+    font-size: 1.1rem;
+    font-weight: 700;
     text-decoration: none;
-
-    img {
-      border-radius: 50%;
-      display: block;
-    }
-
-    span {
-      display: grid;
-    }
-
-    small {
-      color: $muted;
-      font-size: .75rem;
-    }
   }
 
   ul {
     display: flex;
-    gap: 1rem;
+    gap: 1.25rem;
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
   li {
-    font-size: .875rem;
+    font-size: .9rem;
   }
 }
 
 .catalogue {
-  padding: 2.5rem 0;
+  padding: 2rem 0;
 
   &-item {
     border-bottom: 1px solid $line;
+    color: inherit;
     display: block;
-    padding: 1.75rem 0;
+    padding: 1.5rem 0;
     text-decoration: none;
 
     &:first-child {
       padding-top: 0;
-    }
-
-    &:hover .catalogue-title,
-    &:focus .catalogue-title {
-      color: $accent;
     }
   }
 
@@ -113,16 +92,12 @@ footer {
   &-time {
     color: $muted;
     font-size: .8rem;
-    letter-spacing: .04em;
-    text-transform: uppercase;
   }
 
   &-title {
-    font-size: clamp(1.3rem, 3vw, 1.7rem);
-    letter-spacing: -.03em;
-    line-height: 1.2;
-    margin: .45rem 0;
-    transition: color .15s ease;
+    font-size: 1.45rem;
+    line-height: 1.25;
+    margin: .35rem 0;
   }
 
   p {
@@ -132,44 +107,38 @@ footer {
 }
 
 .post {
-  padding: 4rem 0;
+  padding: 3rem 0;
 
   &-info {
     color: $muted;
-    font-size: .85rem;
+    font-size: .9rem;
   }
 
   &-title {
-    font-size: clamp(2.2rem, 7vw, 3.5rem);
-    letter-spacing: -.055em;
-    line-height: 1.05;
-    margin: .5rem 0 2.5rem;
+    font-size: clamp(2rem, 6vw, 3rem);
+    line-height: 1.15;
+    margin: .5rem 0 2rem;
   }
 
   h2,
   h3,
   h4 {
-    letter-spacing: -.025em;
-    line-height: 1.2;
-    margin: 2.25rem 0 .75rem;
+    line-height: 1.25;
+    margin: 2rem 0 .75rem;
   }
 
   p,
   li {
-    font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+    font-family: Georgia, serif;
     font-size: 1.1rem;
   }
 
   p {
-    margin: 0 0 1.4rem;
-  }
-
-  a {
-    color: $accent;
+    margin: 0 0 1.25rem;
   }
 
   blockquote {
-    border-left: .2rem solid $accent;
+    border-left: .2rem solid $line;
     color: $muted;
     margin: 1.5rem 0;
     padding-left: 1rem;
@@ -177,14 +146,12 @@ footer {
 
   pre,
   code {
-    background: $code;
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    background: #f3f4f6;
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
   }
 
   code {
-    border-radius: .2rem;
-    font-size: .9em;
-    padding: .12em .3em;
+    padding: .1em .3em;
   }
 
   pre {
@@ -198,62 +165,27 @@ footer {
 }
 
 .pagination {
-  align-items: center;
   display: flex;
   justify-content: space-between;
   padding: 0 0 3rem;
-
-  .arrow,
-  .top {
-    color: $accent;
-    font-size: .9rem;
-  }
 }
 
 footer {
   border-top: 1px solid $line;
   color: $muted;
-  font-size: .8rem;
-  padding: 2rem 0 3rem;
+  font-size: .85rem;
+  padding: 1.5rem 0 2.5rem;
 }
 
-@media (max-width: 34rem) {
+@media (max-width: 30rem) {
   .nav-container {
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
-    padding: .9rem 0;
+    padding: .75rem 0;
   }
 
   .post {
-    padding: 2.5rem 0;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    background: #101619;
-    color: #e9eff2;
-  }
-
-  .nav,
-  .catalogue-item,
-  footer {
-    border-color: #293238;
-  }
-
-  .catalogue p,
-  .catalogue-pinned,
-  .catalogue-time,
-  .post-info,
-  footer,
-  .nav small,
-  .post blockquote {
-    color: #aab6bd;
-  }
-
-  .post pre,
-  .post code {
-    background: #1c252a;
+    padding: 2rem 0;
   }
 }
