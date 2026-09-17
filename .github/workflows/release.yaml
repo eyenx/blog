@@ -62,7 +62,7 @@ jobs:
 
       - name: Push
         id: push
-        uses: redhat-actions/push-to-registry@v2
+        uses: redhat-actions/push-to-registry@v3
         if: startsWith(github.ref, 'refs/tags/v')
         with:
           image: ${{ steps.build.outputs.image }}
