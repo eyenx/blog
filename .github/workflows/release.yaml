@@ -60,6 +60,55 @@ jobs:
           echo "Tags: ${{ steps.build.outputs.tags }}"
           echo "Tagged Image: ${{ steps.build.outputs.image-with-tag }}"
 
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # 0.36.0
+        env:
+          TRIVY_DB_REPOSITORY: ghcr.io/aquasecurity/trivy-db,public.ecr.aws/aquasecurity/trivy-db
+          TRIVY_JAVA_DB_REPOSITORY: ghcr.io/aquasecurity/trivy-java-db,public.ecr.aws/aquasecurity/trivy-java-db
+        with:
+          image-ref: "${{ inputs.image }}:${{ steps.meta.outputs.version }}"
+          format: "json"
+          ignore-unfixed: true
+          list-all-pkgs: true
+          output: "trivy.json"
+          scanners: "vuln"
+
+      - name: Convert trivy results to sarif
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # 0.36.0
+        with:
+          image-ref: trivy.json
+          scan-type: "convert"
+          format: "sarif"
+          limit-severities-for-sarif: true
+          vuln-type: ""
+          output: "trivy.sarif"
+
+      - name: Convert trivy results to CycloneDX
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # 0.36.0
+        with:
+          image-ref: trivy.json
+          scan-type: "convert"
+          format: "cyclonedx"
+          limit-severities-for-sarif: true
+          vuln-type: ""
+          output: "trivy.cdx"
+
+      - name: Convert trivy results to cosign-vuln
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # 0.36.0
+        with:
+          image-ref: trivy.json
+          scan-type: "convert"
+          format: "cosign-vuln"
+          limit-severities-for-sarif: true
+          vuln-type: ""
+          output: "trivy.cosign.json"
+
+      - name: Upload Trivy scan results to GitHub Security tab
+        uses: github/codeql-action/upload-sarif@ff2f1c621b7f889edc0d3c761ac2e6a3f8cdb0dd # v4.37.7
+        if: startsWith(github.ref, 'refs/tags/v')
+        with:
+          sarif_file: "trivy.sarif"
+
       - name: Push
         id: push
         uses: redhat-actions/push-to-registry@94ade333c38ecc0e60e94785125d9a52ca423b37 # v3.0.0
@@ -68,6 +117,20 @@ jobs:
           image: ${{ steps.build.outputs.image }}
           tags: ${{ steps.build.outputs.tags }}
           registry: ghcr.io/eyenx
+
+      - name: Sign the image with GitHub OIDC Token using cosign
+        run: cosign sign --yes ${{ inputs.image }}@${{ steps.docker_push.outputs.digest }}
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          TAGS: ${{ steps.meta.outputs.tags }}
+
+      - name: Attach an SBOM attestation to the signed image
+        run: cosign attest --yes --type cyclonedx --predicate trivy.cdx ${{ inputs.image }}@${{ steps.docker_push.outputs.digest }}
+        if: startsWith(github.ref, 'refs/tags/v')
+
+      - name: Attach a security attestation to the signed image
+        run: cosign attest --yes --type vuln --predicate trivy.cosign.json ${{ inputs.image }}@${{ steps.docker_push.outputs.digest }}
+        if: startsWith(github.ref, 'refs/tags/v')
 
       - name: Attest
         uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
