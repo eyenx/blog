@@ -68,7 +68,7 @@ jobs:
           TRIVY_DB_REPOSITORY: ghcr.io/aquasecurity/trivy-db,public.ecr.aws/aquasecurity/trivy-db
           TRIVY_JAVA_DB_REPOSITORY: ghcr.io/aquasecurity/trivy-java-db,public.ecr.aws/aquasecurity/trivy-java-db
         with:
-          image-ref: "{{ steps.build.outputs.image-with-tag }}"
+          image-ref: "${{ steps.build.outputs.image-with-tag }}"
           format: "json"
           ignore-unfixed: true
           list-all-pkgs: true
