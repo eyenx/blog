@@ -68,7 +68,7 @@ jobs:
           TRIVY_DB_REPOSITORY: ghcr.io/aquasecurity/trivy-db,public.ecr.aws/aquasecurity/trivy-db
           TRIVY_JAVA_DB_REPOSITORY: ghcr.io/aquasecurity/trivy-java-db,public.ecr.aws/aquasecurity/trivy-java-db
         with:
-          image-ref: "${{ steps.build.outputs.image }}:${{ steps.meta.outputs.version }}"
+          image-ref: "ghcr.io/eyenx/${{ steps.build.outputs.image }}:${{ steps.meta.outputs.version }}"
           format: "json"
           ignore-unfixed: true
           list-all-pkgs: true
@@ -122,19 +122,19 @@ jobs:
 
       - name: Sign the image with GitHub OIDC Token using cosign
         run: | # zizmor: ignore[template-injection]
-          cosign sign --yes ${{ steps.build.outputs.image }}@${{ steps.docker_push.outputs.digest }}
+          cosign sign --yes ghcr.io/eyenx/${{ steps.build.outputs.image }}@${{ steps.docker_push.outputs.digest }}
         if: startsWith(github.ref, 'refs/tags/v')
         env:
           TAGS: ${{ steps.meta.outputs.tags }}
 
       - name: Attach an SBOM attestation to the signed image
         run: | # zizmor: ignore[template-injection]
-          cosign attest --yes --type cyclonedx --predicate trivy.cdx ${{ steps.build.outputs.image }}@${{ steps.docker_push.outputs.digest }}
+          cosign attest --yes --type cyclonedx --predicate trivy.cdx ghcr.io/eyenx/${{ steps.build.outputs.image }}@${{ steps.docker_push.outputs.digest }}
         if: startsWith(github.ref, 'refs/tags/v')
 
       - name: Attach a security attestation to the signed image
         run: | # zizmor: ignore[template-injection]
-          cosign attest --yes --type vuln --predicate trivy.cosign.json ${{ steps.build.outputs.image }}@${{ steps.docker_push.outputs.digest }}
+          cosign attest --yes --type vuln --predicate trivy.cosign.json ghcr.io/eyenx/${{ steps.build.outputs.image }}@${{ steps.docker_push.outputs.digest }}
         if: startsWith(github.ref, 'refs/tags/v')
 
       - name: Attest
