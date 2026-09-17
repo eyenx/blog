@@ -35,7 +35,7 @@ jobs:
             type=semver,pattern=v{{major}}
 
       - name: Login to GHCR
-        uses: redhat-actions/podman-login@v1
+        uses: redhat-actions/podman-login@v2
         id: login
         if: startsWith(github.ref, 'refs/tags/v')
         with:
