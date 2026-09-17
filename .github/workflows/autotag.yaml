@@ -8,13 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@a37ce9120846195fa4ece8f58b268e6043cb2f26 # v3.7.0
         with:
           fetch-depth: 0
 
       - name: Run go-semantic-release
         id: semrel
-        uses: go-semantic-release/action@v1.21
+        uses: go-semantic-release/action@8728a77171abeb8438de6ddfe3779626d081c13e # v1.21.1
         with:
           github-token: ${{ secrets.PAT }}
           allow-initial-development-versions: true

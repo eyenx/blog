@@ -18,11 +18,11 @@ jobs:
       attestations: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
 
       - name: Create metadata
         id: metadata
-        uses: docker/metadata-action@v6
+        uses: docker/metadata-action@dc802804100637a589fabce1cb79ff13a1411302 # v6.2.0
         with:
           images: |
             ghcr.io/eyenx/blog
@@ -35,7 +35,7 @@ jobs:
             type=semver,pattern=v{{major}}
 
       - name: Login to GHCR
-        uses: redhat-actions/podman-login@v2
+        uses: redhat-actions/podman-login@50c2d9a331bb67c8fdab99b86455fad05e2e3252 # v2.0
         id: login
         if: startsWith(github.ref, 'refs/tags/v')
         with:
@@ -44,7 +44,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build
-        uses: redhat-actions/buildah-build@v3
+        uses: redhat-actions/buildah-build@719e3c40d8af9790c23eca13f7daa339f2867034 # v3.1.0
         id: build
         with:
           image: blog
@@ -62,7 +62,7 @@ jobs:
 
       - name: Push
         id: push
-        uses: redhat-actions/push-to-registry@v3
+        uses: redhat-actions/push-to-registry@94ade333c38ecc0e60e94785125d9a52ca423b37 # v3.0.0
         if: startsWith(github.ref, 'refs/tags/v')
         with:
           image: ${{ steps.build.outputs.image }}
@@ -70,7 +70,7 @@ jobs:
           registry: ghcr.io/eyenx
 
       - name: Attest
-        uses: actions/attest-build-provenance@v4
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
         if: startsWith(github.ref, 'refs/tags/v')
         id: attest
         with:
